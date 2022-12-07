@@ -1,1 +1,1 @@
-# Все страницы - https://alekseyvotencev.github.io/homa/
+# Все страницы - https://alekseyvotencev.github.io/homa/+
