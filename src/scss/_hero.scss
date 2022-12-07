@@ -1,0 +1,195 @@
+.hero {
+    padding-top: 1.4rem;
+    padding-bottom: 6rem;
+    background-color: #E8EDF5;
+
+    .container {
+        position: relative;
+    }
+
+    &__breadcrumbs {
+        margin-bottom: 5rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+
+        &-item {
+            position: relative;
+
+            &:last-child {
+
+                .hero__breadcrumbs-item__link {
+                    color: #9FAABC;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-right: .8rem;
+
+                &::after {
+                    content: '/';
+                    position: absolute;
+                    right: -.7rem;
+                    top: 50%;
+                    font-weight: 350;
+                    font-size: 1.6rem;
+                    line-height: 2.4rem;
+                    color: #000000;
+                    transform: translateY(-50%);
+                }
+            }
+
+            &__link {
+                font-family: 'Circe';
+                font-style: normal;
+                font-weight: 350;
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+                color: #000000;
+            }
+        }
+    }
+
+    &__heading {
+        font-family: 'Circe';
+        font-weight: 700;
+        font-size: 4.5rem;
+        line-height: 5rem;
+        color: #313131;
+
+    }
+
+    .sorting-select__container {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+
+        span {
+            margin-right: .5rem;
+            font-size: 1.4rem;
+            line-height: 1.9rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #B5B5B5;
+        }
+
+        .choices {
+            font-size: 1.4rem;
+            line-height: 1.9rem;
+            overflow: visible;
+
+            &::after {
+                content: none;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 1.4rem;
+                right: 0;
+                width: 1.3rem;
+                height: .7rem;
+                background-image: url(../images/svg/select-arrow.svg);
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            &__placeholder {
+                opacity: 1;
+                color: #313131;
+            }
+
+            &__inner {
+                padding: 0;
+                min-height: auto;
+                border: none;
+                font-size: 1.4rem;
+                line-height: 1.9rem;
+                background-color: transparent;
+            }
+
+            &__list {
+                border: none;
+
+                &--single {
+                    padding: 0;
+                    padding-right: 2rem;
+                    text-transform: uppercase;
+                    text-align: right;
+                }
+
+                &--dropdown {
+                    word-break: unset;
+                }
+            }
+
+            &__item {
+                padding: 1rem;
+                font-size: 1.4rem;
+                line-height: 1.9rem;
+                color: #313131;
+                text-transform: uppercase;
+            }
+        }
+
+
+    }
+
+    @media (max-width:48em) {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        background-color: #FFF;
+
+        &__breadcrumbs {
+            margin-bottom: 6.8rem;
+
+            &-item {
+
+                &:not(:last-child) {
+                    margin-right: 1.5rem;
+
+                    &::after {
+                        right: -1.2rem;
+                        font-size: 3rem;
+                        line-height: 4.4rem;
+                    }
+                }
+
+
+                &__link {
+                    font-size: 3rem;
+                    line-height: 4.4rem;
+                }
+            }
+        }
+
+        &__heading {
+            font-size: 6.6rem;
+            line-height: 7.2rem;
+        }
+    }
+
+    .sorting-select__container {
+        position: relative;
+    }
+}
+
+.history-hero {
+    padding-bottom: 9.7rem;
+
+    @media (max-width:48em) {
+        padding-bottom: 4rem;
+    }
+}
+
+.article-hero {
+    padding-bottom: 9.7rem;
+
+    @media (max-width:48em) {
+        padding-bottom: 8.8rem;
+    }
+}

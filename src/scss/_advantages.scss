@@ -1,0 +1,127 @@
+.advantages {
+    padding-top: 6.5rem;
+    padding-bottom: 6.5rem;
+    background-color: #EFF2F7;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+
+            &:not(:last-child) {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: calc(50% + 2.5rem);
+                    top: calc(50% + 1rem);
+                    width: 46rem;
+                    height: 1px;
+                    background-color: #C6C6C6;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-right: 18.7rem;
+            }
+
+            &.active {
+                .advantages__list-item__icon {
+                    path {
+                        fill: #E30613;
+                    }
+                }
+
+                .advantages__list-item__description {
+                    font-weight: 700;
+                }
+            }
+
+            &__icon {
+                margin-bottom: 2.3rem;
+                width: 8.3rem;
+                height: 7.5rem;
+                object-fit: contain;
+            }
+
+            &__point {
+                margin-bottom: 1.1rem;
+                width: 2.5rem;
+                height: 2.5rem;
+                object-fit: contain;
+            }
+
+            &__description {
+                width: 32.7rem;
+                font-size: 2.2rem;
+                line-height: 3.2rem;
+                text-align: center;
+                color: #000;
+            }
+        }
+    }
+
+    @media (max-width: 48em) {
+        padding-top: 6.2rem;
+        padding-bottom: 33.8rem;
+
+        &__heading {
+            margin-bottom: 8rem;
+            width: 100%;
+            font-family: 'Circe';
+            font-weight: 700;
+            font-size: 5.2rem;
+            line-height: 5.2rem;
+            color: #000000;
+            text-align: center;
+        }
+
+        &__list {
+            flex-direction: column;
+            justify-content: flex-start;
+
+            &-item {
+                width: 58rem;
+
+                &:not(:last-child) {
+                    margin-right: 0;
+                    margin-bottom: 8rem;
+
+                    &::after {
+                        left: 0;
+                        top: calc(50% + 7rem);
+                        width: 1px;
+                        height: 30rem;
+                    }
+                }
+
+                &__icon {
+                    margin-bottom: 1rem;
+                    width: 16.4rem;
+                    height: 15rem;
+                }
+
+                &__point {
+                    margin-bottom: 0;
+                    width: 4rem;
+                    height: 4rem;
+                    align-self: flex-start;
+                    transform: translateX(-50%);
+                }
+
+                &__description {
+                    width: 100%;
+                    font-size: 3.6rem;
+                    line-height: 5.4rem;
+                }
+            }
+        }
+
+    }
+}
