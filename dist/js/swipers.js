@@ -233,6 +233,15 @@ const swiperSame = new Swiper('.swiper__same', {
             return `<span class="current">${getTwoDigitNumber(current)}</span><span class="total">${getTwoDigitNumber(total)}</span>`;
         }
     },
+
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        769: {
+            slidesPerView: 'auto',
+        }
+    }
 });
 
 const swiperRelated = new Swiper('.swiper__related', {
@@ -255,6 +264,15 @@ const swiperRelated = new Swiper('.swiper__related', {
             return `<span class="current">${getTwoDigitNumber(current)}</span><span class="total">${getTwoDigitNumber(total)}</span>`;
         }
     },
+
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        769: {
+            slidesPerView: 'auto',
+        }
+    }
 });
 
 const swiperProductRecommendations = new Swiper('.product .swiper__recommendations', {
@@ -277,6 +295,15 @@ const swiperProductRecommendations = new Swiper('.product .swiper__recommendatio
             return `<span class="current">${getTwoDigitNumber(current)}</span><span class="total">${getTwoDigitNumber(total)}</span>`;
         }
     },
+
+    breakpoints: {
+        320: {
+            spaceBetween: rem(3),
+        },
+        769: {
+            spaceBetween: rem(3.2),
+        }
+    }
 });
 
 
