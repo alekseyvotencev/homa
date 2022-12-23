@@ -42,6 +42,16 @@
             color: #000;
             cursor: pointer;
 
+            &:hover {
+                span {
+                    color: #E30613;
+                }
+            }
+
+            span {
+                transition: color .2s ease-in-out;
+            }
+
             svg {
                 margin-right: .9rem;
                 width: 2rem;
@@ -59,6 +69,16 @@
             line-height: 2.4rem;
             color: #000;
 
+            &:hover {
+                span {
+                    color: #E30613;
+                }
+            }
+
+            span {
+                transition: color .2s ease-in-out;
+            }
+
             svg {
                 margin-right: .9rem;
                 width: 2.5rem;
@@ -73,6 +93,15 @@
             line-height: 2rem;
             color: #2B2E34;
             border-bottom: 1px solid #2B2E34;
+            transition-property: border-color, color;
+            transition-duration: .2s;
+            transition-timing-function: ease-in-out;
+
+            &:hover {
+                color: #E30613;
+                border-color: #E30613;
+            }
+
         }
 
         &-search {
@@ -84,6 +113,18 @@
                 width: 2.5rem;
                 height: 2.5rem;
                 object-fit: contain;
+
+                path {
+                    transition: fill .2s ease-in-out;
+                }
+            }
+
+            &:hover {
+                svg {
+                    path {
+                        fill: #E30613;
+                    }
+                }
             }
         }
 
@@ -97,6 +138,10 @@
             &.active {
                 font-weight: 700;
                 color: #000;
+            }
+
+            &:hover {
+                color: #E30613;
             }
         }
 

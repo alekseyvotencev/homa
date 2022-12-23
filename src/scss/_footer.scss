@@ -31,6 +31,11 @@
             font-size: 1.8rem;
             line-height: 2.7rem;
             color: #9C9C9C;
+
+            .copy {
+                display: inline-block;
+                transform: translateY(-.2rem);
+            }
         }
 
         &-policy {
@@ -42,6 +47,12 @@
             line-height: 2.7rem;
             text-decoration-line: underline;
             color: #9C9C9C;
+            transition: color .2s ease-in-out;
+
+            &:hover {
+                color: #E30613;
+                text-decoration: underline;
+            }
         }
     }
 
@@ -61,6 +72,11 @@
                 font-size: 1.8rem;
                 line-height: 2.7rem;
                 color: #000;
+                transition: color .2s ease-in-out;
+
+                &:hover {
+                    color: #E30613;
+                }
             }
         }
     }
@@ -86,6 +102,11 @@
                 font-size: 1.8rem;
                 line-height: 2.7rem;
                 color: #000000;
+                transition: color .2s ease-in-out;
+
+                &:hover {
+                    color: #E30613;
+                }
             }
         }
     }
@@ -110,6 +131,11 @@
                 font-size: 1.8rem;
                 line-height: 2.7rem;
                 color: #000000;
+                transition: color .2s ease-in-out;
+
+                &:hover {
+                    color: #E30613;
+                }
             }
         }
     }
@@ -168,6 +194,11 @@
                     font-size: 1.8rem;
                     line-height: 2.7rem;
                     color: #000000;
+                    transition: color .2s ease-in-out;
+
+                    &:hover {
+                        color: #E30613;
+                    }
 
                     img {
                         margin-right: 1.4rem;
@@ -291,6 +322,11 @@
                     font-size: 3.2rem;
                     line-height: 4.8rem;
                     color: #9C9C9C;
+
+                    .copy {
+                        display: inline-block;
+                        transform: translateY(-.3rem);
+                    }
                 }
 
                 &__policy {

@@ -76,10 +76,13 @@
 
                 &:hover {
                     svg {
-                        >path {
+                        path {
                             fill: #E30613;
-                            stroke: #E30613;
                         }
+                    }
+
+                    span {
+                        color: #E30613;
                     }
                 }
 
@@ -93,17 +96,15 @@
                     }
 
                     &:nth-child(2) {
-                        margin-left: -4.6rem;
+                        margin-left: -4.7rem;
                         margin-right: 1rem;
                         display: inline-block;
-                        width: 2.5rem;
-                        height: 3rem;
+                        width: 2.7rem;
+                        height: 3.2rem;
                         object-fit: contain;
 
-                        >path {
-                            transition-property: fill, stroke;
-                            transition-duration: .15s;
-                            transition-timing-function: ease-in-out;
+                        path {
+                            transition: fill .2s ease-in-out;
                         }
                     }
 
@@ -111,12 +112,13 @@
 
                 span {
                     background-color: #FFF;
+                    transition: color .2s ease-in-out;
                 }
             }
 
             &__request {
                 span {
-                    background: linear-gradient(0deg, #FAFAFA, #FAFAFA), linear-gradient(180deg, #FAFAFA 19.28%, #FFFFFF 92.96%), #FFFFFF;
+                    background-color: #FFFFFF;
                 }
             }
         }
@@ -124,10 +126,12 @@
 
     &__right {
         position: relative;
+        width: 68.5rem;
 
         &-img {
             height: 100%;
-            width: auto;
+            width: 100%;
+            object-fit: cover;
         }
 
         &-btn {
@@ -141,6 +145,11 @@
             line-height: 3rem;
             color: #FFFFFF;
             background-color: #E30613;
+            transition: background-color .2s ease-in-out;
+
+            &:hover {
+                background-color: #b8030e;
+            }
         }
     }
 
@@ -212,8 +221,7 @@
 
             &-img {
                 width: 100%;
-                height: auto;
-                object-fit: contain;
+                height: 85.6rem;
             }
 
             &-btn {

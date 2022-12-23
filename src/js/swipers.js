@@ -275,7 +275,7 @@ const swiperRelated = new Swiper('.swiper__related', {
     }
 });
 
-const swiperProductRecommendations = new Swiper('.product .swiper__recommendations', {
+const swiperProductRecommendations = new Swiper('.swiper__product-recommendations', {
     direction: 'horizontal',
     speed: 500,
     allowTouchMove: false,

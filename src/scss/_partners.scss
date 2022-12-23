@@ -2,27 +2,56 @@
     padding-top: 5rem;
     padding-bottom: 5rem;
     border-top: 1px solid #C4C4C4;
+    overflow: hidden;
 
     &__list {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        animation-name: running;
+        animation-duration: 30s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+
+        @keyframes running {
+            0% {
+                transform: translateX(calc(100% + 26rem))
+            }
+
+            100% {
+                transform: translateX(calc(-100% - 26rem))
+            }
+        }
 
         &-item {
-            p {
+
+            &:hover {
+                a {
+                    color: #D6111C;
+
+                    span {
+                        color: #313131;
+                    }
+                }
+
+
+            }
+
+            a {
                 font-family: "Montserrat";
                 font-weight: 700;
                 font-size: 3.4rem;
                 line-height: 1;
                 color: #AEAEAE;
+                transition: color .2s ease-in-out;
 
                 span {
                     color: #808080;
+                    transition: color .2s ease-in-out;
                 }
             }
         }
-
     }
 
     @media (max-width:48em) {
@@ -32,6 +61,7 @@
         &__list {
             justify-content: flex-start;
             flex-wrap: wrap;
+            animation-duration: 10s;
 
             &-item {
                 &:nth-child(3n+1) {
@@ -56,7 +86,22 @@
                 margin-right: auto;
 
             }
+
+            @keyframes running {
+                0% {
+                    transform: translateX(calc(100% + 3rem))
+                }
+
+                100% {
+                    transform: translateX(calc(-100% - 3rem))
+                }
+            }
         }
     }
+}
 
+
+
+.reviews__partners {
+    border-top: none;
 }

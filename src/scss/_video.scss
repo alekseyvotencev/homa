@@ -42,10 +42,18 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
 
+                &:hover {
+
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+
                 img {
                     width: 5.7rem;
                     height: 5.7rem;
                     object-fit: contain;
+                    transition: transform .2s ease-in-out;
                 }
             }
 
@@ -87,7 +95,9 @@
             }
 
             &-slide {
+
                 &__link {
+
                     img {
                         width: 10.6rem;
                         height: 10.6rem;
