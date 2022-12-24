@@ -1,5 +1,6 @@
 .polymer-catalog {
     padding-top: 9rem;
+    border-bottom: 1px solid #C4C4C4;
 
     &__top {
         margin-bottom: 1.1rem;
@@ -37,6 +38,29 @@
                 display: flex;
                 flex-direction: column;
 
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: .3rem;
+                    background-color: #E30613;
+                    opacity: 0;
+                    transition: opacity .2s ease-in-out;
+                }
+
+                &:hover {
+
+                    &::after {
+                        opacity: 1;
+                    }
+
+                    .polymer-catalog__right-list__item-card-name {
+                        color: #E30613;
+                    }
+                }
+
                 &:not(:nth-child(3n+3)) {
                     margin-right: 4rem;
                 }
@@ -73,6 +97,8 @@
                         line-height: 2.4rem;
                         text-transform: uppercase;
                         color: #000;
+
+                        transition: color .2s ease-in-out;
                     }
                 }
             }
@@ -91,9 +117,25 @@
 
             &__item {
                 padding: 2.1rem 2rem 2rem 4rem;
+                position: relative;
                 display: flex;
                 justify-content: space-between;
                 border: 1px solid #CCCCCC;
+                transition: border-color .2s ease-in-out;
+
+                &:hover {
+                    border-color: #E30613;
+
+                    .polymer-catalog__right-list2__item-left-link {
+                        color: #E30613;
+
+                        svg {
+                            path {
+                                fill: #E30613;
+                            }
+                        }
+                    }
+                }
 
                 &:not(:last-child) {
                     margin-bottom: 4rem;
@@ -127,6 +169,16 @@
                         letter-spacing: 0.05em;
                         text-transform: uppercase;
                         color: #000000;
+                        transition: color .2s ease-in-out;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                        }
 
                         span {
                             margin-right: 1.8rem;
@@ -136,6 +188,10 @@
                             width: 2rem;
                             height: 1.6rem;
                             object-fit: contain;
+
+                            path {
+                                transition: fill .2s ease-in-out;
+                            }
                         }
                     }
                 }
@@ -263,10 +319,17 @@
                     left: 50%;
                     transform: translate(-50%, -50%);
 
+                    &:hover {
+                        img {
+                            transform: scale(1.1);
+                        }
+                    }
+
                     img {
                         width: 5.7rem;
                         height: 5.7rem;
                         object-fit: contain;
+                        transition: transform .2s ease-in-out;
                     }
                 }
 
@@ -354,6 +417,7 @@
 
                 &__item {
                     padding: 4rem 3rem;
+                    position: relative;
                     flex-direction: column;
 
                     &-left {

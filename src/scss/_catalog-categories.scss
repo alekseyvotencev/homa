@@ -126,6 +126,11 @@
                                         font-size: 1.6rem;
                                         line-height: 4rem;
                                         color: #000000;
+                                        transition: color .2s ease-in-out;
+
+                                        &:hover {
+                                            color: #E30613;
+                                        }
                                     }
                                 }
                             }

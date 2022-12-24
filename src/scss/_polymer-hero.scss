@@ -5,14 +5,148 @@
     position: relative;
 
     .swiper__polymer {
-        width: 98rem;
+        width: 192rem;
         height: 52.6rem;
 
         &-slide {
-            &__img {
-                width: 100%;
+            display: flex;
+
+            &:nth-child(2n) {
+
+                .swiper__polymer-slide__right-breadcrumbs {
+                    li {
+                        &:last-child {
+                            a {
+                                color: #FFF;
+                            }
+                        }
+
+                        &:not(:last-child) {
+                            &::after {
+                                color: #E0E0E0;
+                            }
+                        }
+
+                        a {
+                            color: #E0E0E0;
+                        }
+                    }
+                }
+
+                .swiper__polymer-slide__right {
+                    color: #FFF;
+                    background-color: #868686;
+                }
+
+                .swiper__polymer-slide__right-link-catalog {
+
+                    &:hover {
+                        color: #E30613;
+
+                        span {
+                            color: #E30613;
+                        }
+
+                        svg {
+                            path {
+                                fill: #E30613;
+                            }
+                        }
+                    }
+
+                    span {
+                        color: #FFF;
+                        background-color: #868686;
+                        transition: color .2s ease-in-out;
+                    }
+
+                    svg {
+                        path {
+                            fill: #FFF;
+                        }
+                    }
+                }
+            }
+
+            &__left {
+                width: 98rem;
                 height: 100%;
-                object-fit: cover;
+
+                &-img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &__right {
+                padding: 1.4rem 34rem 1.4rem 12rem;
+                width: 94rem;
+                background-color: #EDF2F8;
+
+                &-breadcrumbs {
+                    margin-bottom: 5.8rem;
+                }
+
+                &-heading {
+                    margin-bottom: 2.4rem;
+                    font-weight: 700;
+                    font-size: 4.5rem;
+                    line-height: 5rem;
+                }
+
+                &-description {
+                    margin-bottom: 2.4rem;
+                    width: 38rem;
+                    font-size: 1.8rem;
+                    line-height: 2.4rem;
+                }
+
+                &-link-catalog {
+                    span {
+                        background-color: #EDF2F8;
+                    }
+                }
+
+                &-link-more {
+                    padding: 2.2rem 3.8rem 1.6rem 3.8rem;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    width: 46rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    font-size: 2rem;
+                    line-height: 2.9rem;
+                    color: #000;
+                    background-color: #FAFAFA;
+                    transition: color .2s ease-in-out;
+
+                    &:hover {
+                        color: #E30613;
+
+                        svg {
+                            path {
+                                fill: #E30613;
+                            }
+                        }
+                    }
+
+                    span {
+                        margin-right: 2.5rem;
+                    }
+
+                    svg {
+                        width: 3.4rem;
+                        height: 1rem;
+                        object-fit: contain;
+
+                        path {
+                            transition: fill .2s ease-in-out;
+                        }
+                    }
+                }
             }
         }
     }
@@ -50,6 +184,16 @@
             bottom: 2rem;
             user-select: none;
 
+            &.even {
+                .swiper-pagination-bullet {
+                    color: #FFF;
+
+                    &-active {
+                        color: #E30613;
+                    }
+                }
+            }
+
             .swiper-pagination-bullet {
                 width: auto;
                 height: auto;
@@ -72,60 +216,6 @@
                 &:not(:last-child) {
                     margin-right: 4rem;
                 }
-            }
-        }
-    }
-
-    &__right {
-        padding: 1.4rem 34rem 1.4rem 12rem;
-        width: 94rem;
-        background-color: #EDF2F8;
-
-        &__breadcrumbs {
-            margin-bottom: 5.8rem;
-        }
-
-        &__heading {
-            margin-bottom: 2.4rem;
-            font-weight: 700;
-            font-size: 4.5rem;
-            line-height: 5rem;
-        }
-
-        &__description {
-            margin-bottom: 2.4rem;
-            width: 38rem;
-            font-size: 1.8rem;
-            line-height: 2.4rem;
-        }
-
-        &__link-catalog {
-            span {
-                background-color: #EDF2F8;
-            }
-        }
-
-        &__link-more {
-            padding: 2.2rem 3.8rem 1.6rem 3.8rem;
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            width: 46rem;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            font-size: 2rem;
-            line-height: 2.9rem;
-            color: #000;
-            background-color: #FAFAFA;
-
-            span {
-                margin-right: 2.5rem;
-            }
-
-            img {
-                width: 3.4rem;
-                object-fit: contain;
             }
         }
     }
@@ -219,8 +309,9 @@
                 line-height: 4.8rem;
                 background-color: transparent;
 
-                img {
+                svg {
                     width: 4rem;
+                    height: 1.2rem;
                 }
             }
         }

@@ -211,6 +211,16 @@ const swiperPolymer = new Swiper('.swiper__polymer', {
             return `<span class="${className}">${getTwoDigitNumber(index + 1)}</span>`;
         }
     },
+
+    on: {
+        slideChange: function (swiper) {
+            if ((swiper.activeIndex + 1) % 2 == 0) {
+                document.querySelector('.swiper__polymer-controls__pagination').classList.add('even')
+            } else {
+                document.querySelector('.swiper__polymer-controls__pagination').classList.remove('even')
+            }
+        }
+    }
 });
 
 const swiperSame = new Swiper('.swiper__same', {
