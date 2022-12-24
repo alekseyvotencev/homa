@@ -32,6 +32,7 @@ const files = () => {
         'src/fonts/*.woff',
         'src/fonts/*.woff2',
         'src/images/**',
+        'src/videos/**',
         'src/js/**',
     ], {
         base: 'src'
