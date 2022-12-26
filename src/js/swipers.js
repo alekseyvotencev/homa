@@ -215,12 +215,17 @@ const swiperPolymer = new Swiper('.swiper__polymer', {
     on: {
         slideChange: function (swiper) {
             if ((swiper.activeIndex + 1) % 2 == 0) {
-                document.querySelector('.swiper__polymer-controls__pagination').classList.add('even')
+                document.querySelector('.swiper__polymer-controls__prev.mobile').classList.add('even');
+                document.querySelector('.swiper__polymer-controls__next.mobile').classList.add('even');
+                document.querySelector('.swiper__polymer-controls__pagination').classList.add('even');
             } else {
-                document.querySelector('.swiper__polymer-controls__pagination').classList.remove('even')
+                document.querySelector('.swiper__polymer-controls__prev.mobile').classList.remove('even');
+                document.querySelector('.swiper__polymer-controls__next.mobile').classList.remove('even');
+                document.querySelector('.swiper__polymer-controls__pagination').classList.remove('even');
             }
         }
-    }
+    },
+
 });
 
 const swiperSame = new Swiper('.swiper__same', {
@@ -290,16 +295,14 @@ const swiperProductRecommendations = new Swiper('.swiper__product-recommendation
     speed: 500,
     allowTouchMove: false,
     loop: false,
-    spaceBetween: rem(3.2),
-    slidesPerView: 'auto',
 
     navigation: {
-        nextEl: '.swiper__recommendations-next',
-        prevEl: '.swiper__recommendations-prev',
+        nextEl: '.swiper__product-recommendations-next',
+        prevEl: '.swiper__product-recommendations-prev',
     },
 
     pagination: {
-        el: '.swiper__recommendations-pagination',
+        el: '.swiper__product-recommendations-pagination',
         type: 'custom',
         renderCustom: function (swiper, current, total) {
             return `<span class="current">${getTwoDigitNumber(current)}</span><span class="total">${getTwoDigitNumber(total)}</span>`;
@@ -308,9 +311,11 @@ const swiperProductRecommendations = new Swiper('.swiper__product-recommendation
 
     breakpoints: {
         320: {
+            slidesPerView: 2,
             spaceBetween: rem(3),
         },
         769: {
+            slidesPerView: 'auto',
             spaceBetween: rem(3.2),
         }
     }

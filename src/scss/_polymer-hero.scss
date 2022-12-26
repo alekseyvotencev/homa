@@ -225,13 +225,78 @@
 
         .swiper__polymer {
             width: 100%;
-            height: 40rem;
+            height: auto;
+
+            &-slide {
+                flex-direction: column-reverse;
+
+                &:nth-child(2n) {
+                    .swiper__polymer-slide__right-link-more {
+                        color: #FFF;
+
+                        svg {
+                            path {
+                                fill: #FFF;
+                            }
+                        }
+                    }
+                }
+
+                &__left {
+                    width: 100%;
+                    height: 40rem;
+                }
+
+                &__right {
+                    padding: 4rem 3rem 15rem 3rem;
+                    width: 100%;
+
+                    &-heading {
+                        margin-bottom: 4rem;
+                        font-size: 6.6rem;
+                        line-height: 7.2rem;
+                    }
+
+                    &-description {
+                        margin-bottom: 2.6rem;
+                        width: 100%;
+                        font-size: 3.2rem;
+                        line-height: 4.8rem;
+                    }
+
+                    &-links {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+
+                    &-link-more {
+                        padding: 0;
+                        right: auto;
+                        bottom: auto;
+                        width: auto;
+                        position: relative;
+                        font-size: 3.2rem;
+                        line-height: 4.8rem;
+                        background-color: transparent;
+
+                        svg {
+                            width: 4rem;
+                            height: 1.2rem;
+                        }
+                    }
+                }
+            }
         }
 
         .swiper__polymer-controls {
             display: flex;
             align-items: center;
+            position: absolute;
             justify-content: space-between;
+            width: 69rem;
+            bottom: 45rem;
+            left: 3rem;
 
             &__prev,
             &__next {
@@ -244,14 +309,27 @@
                 display: inline-block;
                 background-color: transparent;
 
-                img {
+                &.even {
+                    svg {
+                        path {
+                            fill: #FFF;
+                        }
+                    }
+                }
+
+                svg {
                     width: 6.8rem;
+                    height: 2rem;
                     object-fit: contain;
+
+                    path {
+                        transition: fill .2s ease-in-out;
+                    }
                 }
             }
 
             &__prev {
-                img {
+                svg {
                     transform: scale(-1);
                 }
             }
@@ -268,50 +346,6 @@
                     &:not(:last-child) {
                         margin-right: 8rem;
                     }
-                }
-            }
-        }
-
-        &__right {
-            padding: 4rem 3rem 6rem 3rem;
-            width: 100%;
-
-            &__breadcrumbs {
-                margin-bottom: 6rem;
-            }
-
-            &__heading {
-                margin-bottom: 4rem;
-                font-size: 6.6rem;
-                line-height: 7.2rem;
-            }
-
-            &__description {
-                margin-bottom: 2.6rem;
-                width: 100%;
-                font-size: 3.2rem;
-                line-height: 4.8rem;
-            }
-
-            &__links {
-                margin-bottom: 4rem;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                width: 100%;
-            }
-
-            &__link-more {
-                padding: 0;
-                position: relative;
-                width: auto;
-                font-size: 3.2rem;
-                line-height: 4.8rem;
-                background-color: transparent;
-
-                svg {
-                    width: 4rem;
-                    height: 1.2rem;
                 }
             }
         }
