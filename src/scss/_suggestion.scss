@@ -110,10 +110,18 @@
                         }
 
                         a {
+
+                            &:hover {
+                                img {
+                                    opacity: .7;
+                                }
+                            }
+
                             img {
                                 width: 2.4rem;
                                 height: 2.4rem;
                                 object-fit: contain;
+                                transition: opacity .2s ease-in-out;
                             }
                         }
                     }
@@ -261,6 +269,7 @@
                             &:not(:last-child) {
                                 margin-right: 2rem;
                             }
+
                             a {
                                 img {
                                     width: 4.8rem;
