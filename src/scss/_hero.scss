@@ -201,3 +201,16 @@
         padding-bottom: 8.8rem;
     }
 }
+
+.product-hero {
+    padding-bottom: 5.4rem;
+    background-color: #FFF;
+
+    .hero__breadcrumbs {
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 48em) {
+        padding-bottom: 6.4rem;
+    }
+}

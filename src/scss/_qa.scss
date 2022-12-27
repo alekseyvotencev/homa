@@ -73,6 +73,14 @@
             position: absolute;
             bottom: 2.8rem;
             right: 2.2rem;
+
+            svg {
+                &:last-child {
+                    width: 3.4rem;
+                    height: 1rem;
+                    object-fit: contain;
+                }
+            }
         }
     }
 
@@ -159,6 +167,19 @@
         align-items: center;
         font-size: 2rem;
         line-height: 2.9rem;
+        transition: color .2s ease-in-out;
+
+        &:hover {
+            color: #E30613;
+
+            svg {
+                &:last-child {
+                    path {
+                        fill: #E30613;
+                    }
+                }
+            }
+        }
 
         svg {
             &:first-child {
@@ -174,16 +195,21 @@
                 height: 1.9rem;
                 object-fit: contain;
             }
+
+            &:last-child {
+                width: 3.4rem;
+                height: 1rem;
+                object-fit: contain;
+
+                path {
+                    transition: fill .2s ease-in-out;
+                }
+            }
         }
 
         span {
             margin-right: 1.3rem;
             background-color: #FFF;
-        }
-
-        img {
-            width: 3.4rem;
-            object-fit: contain;
         }
     }
 
@@ -250,6 +276,13 @@
             &__btn {
                 bottom: 4rem;
                 right: 4rem;
+
+                svg {
+                    &:last-child {
+                        width: 4rem;
+                        height: 1.2rem;
+                    }
+                }
             }
         }
 
@@ -322,7 +355,7 @@
         &__btn-error {
             margin-bottom: 10rem;
             font-size: 3.2rem;
-            line-height: 4.8rem;
+            line-height: 4.2rem;
 
             svg {
                 &:first-child {
@@ -331,10 +364,15 @@
                 }
 
                 &:nth-child(2) {
-                    margin-left: -5rem;
+                    margin-left: -5.2rem;
                     margin-right: .6rem;
                     width: 2.8rem;
                     height: 2rem;
+                }
+
+                &:last-child {
+                    width: 4rem;
+                    height: 1.2rem;
                 }
             }
 

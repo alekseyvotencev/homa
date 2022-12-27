@@ -180,6 +180,10 @@
             font-weight: 700;
             font-size: 3rem;
             line-height: 4.4rem;
+
+            &:last-of-type {
+                color: #E30613;
+            }
         }
 
         &-list3 {
@@ -563,10 +567,18 @@
                     }
 
                     &-link {
+
+                        &:hover {
+                            img {
+                                opacity: .7;
+                            }
+                        }
+
                         img {
                             width: 2.4rem;
                             height: 2.4rem;
                             object-fit: contain;
+                            transition: opacity .2s ease-in-out;
                         }
                     }
                 }
