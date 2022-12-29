@@ -14,11 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
         rusBtn.classList.add('active');
     })
 
-    // // ширина аккордеона в выпадающем списке в шапке
-    // accordionWidth = document.querySelector('#dropdown-accordion').offsetWidth;
-    // document.querySelector('#dropdown-accordion').parentElement.setAttribute('style', `min-width:${accordionWidth}px`);
-
-
     const sortingSelect = new Choices('.sorting-select', {
         searchEnabled: false,
         shouldSort: false,

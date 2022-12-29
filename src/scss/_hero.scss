@@ -77,6 +77,7 @@
         }
 
         .choices {
+            width: max-content;
             font-size: 1.4rem;
             line-height: 1.9rem;
             overflow: visible;
@@ -113,6 +114,7 @@
             }
 
             &__list {
+                width: max-content;
                 border: none;
 
                 &--single {
@@ -135,8 +137,6 @@
                 text-transform: uppercase;
             }
         }
-
-
     }
 
     @media (max-width:48em) {
@@ -171,11 +171,43 @@
             font-size: 6.6rem;
             line-height: 7.2rem;
         }
+
+
+        .sorting-select__container {
+            margin-top: 8.2rem;
+            position: relative;
+
+            span {
+                font-size: 2.8rem;
+                line-height: 3.8rem;
+            }
+
+            .choices {
+                font-size: 2.8rem;
+                line-height: 3.8rem;
+
+                &::before {
+                    top: 2rem;
+                    right: -1rem;
+                    width: 2.6rem;
+                    height: 1.4rem;
+                }
+
+
+                &__inner {
+                    font-size: 2.8rem;
+                    line-height: 3.8rem;
+                }
+
+                &__item {
+                    font-size: 2.8rem;
+                    line-height: 3.8rem;
+                }
+            }
+        }
     }
 
-    .sorting-select__container {
-        position: relative;
-    }
+
 }
 
 .history-hero {
