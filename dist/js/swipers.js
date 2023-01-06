@@ -13,9 +13,11 @@ const getTwoDigitNumber = function (number) {
     else return String(number)
 }
 
+const fraction = document.querySelector('#intro__swiper-fraction');
+
 const introSwiper = new Swiper('.intro__swiper', {
     direction: 'horizontal',
-    loop: true,
+    // loop: true,
     speed: 500,
     allowTouchMove: false,
     slidesPerView: 'auto',
@@ -47,28 +49,23 @@ const introSwiper = new Swiper('.intro__swiper', {
                     }
                 }
             },
+            // pagination: {
+            //     renderBullet: function (index, className) {
+            //         if (index < 10) {
+            //             return '<span class="' + className + '">' + '0' + (index + 1) + '</span>';
+            //         } else {
+            //             return '<span class="' + className + '">' + (index + 1) + '</span>';
+            //         }
+            //     }
+            // },
+        }
+    },
+    on: {
+        slideChange: () => {
+            fraction.textContent = `${swiper.realIndex + 1} / ${slideCount}`;
         }
     }
 });
-
-const introSwiperImages = new Swiper('.intro__swiper-images', {
-    direction: 'horizontal',
-    speed: 500,
-    allowTouchMove: false,
-    loop: true,
-    slidesPerView: 1,
-
-    navigation: {
-        nextEl: '.intro__swiper-images__next',
-        prevEl: '.intro__swiper-images__prev',
-    },
-
-    pagination: {
-        el: '.intro__swiper-images__pagination',
-        type: 'bullets',
-    },
-});
-
 
 const swiperNews = new Swiper('.swiper__news', {
     direction: 'horizontal',
@@ -320,6 +317,38 @@ const swiperProductRecommendations = new Swiper('.swiper__product-recommendation
         }
     }
 });
+
+const staff = document.querySelectorAll('.swiper__staff');
+staff.forEach(swiperStaff => {
+    new Swiper(swiperStaff, {
+        direction: 'horizontal',
+        speed: 500,
+        loop: false,
+
+        navigation: {
+            nextEl: '.swiper__staff-next',
+            prevEl: '.swiper__staff-prev',
+        },
+
+        pagination: {
+            el: '.swiper__staff-pagination',
+            type: 'custom',
+            renderCustom: function (swiper, current, total) {
+                return `<span class="current">${getTwoDigitNumber(current)}</span><span class="total">${getTwoDigitNumber(total)}</span>`;
+            }
+        },
+
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            769: {
+                slidesPerView: 'auto',
+                spaceBetween: rem(4),
+            }
+        }
+    });
+})
 
 
 

@@ -40,32 +40,18 @@
                 margin-bottom: 3.6rem;
             }
 
-            &:nth-child(2) {
-                &:hover {
-
-                    cursor: pointer;
-
-                    .production__list-item__card-icon {
-                        path {
-                            &:first-child {
-                                stroke: #E30613;
-                            }
-
-                            &:last-child {
-                                fill: #E30613;
-                            }
-                        }
-                    }
+            &:hover {
+                .production__list-item__card-title {
+                    color: silver;
                 }
-            }
 
-            &:not(:nth-child(2)):hover {
+                .production__list-item__card-description {
+                    color: silver;
 
-                cursor: pointer;
-
-                .production__list-item__card-icon {
-                    path {
-                        fill: #E30613;
+                    svg {
+                        path {
+                            fill: silver;
+                        }
                     }
                 }
             }
@@ -102,6 +88,7 @@
                     font-size: 2.4rem;
                     line-height: 2rem;
                     color: #FFF;
+                    transition: color .2s ease-in-out;
                 }
 
                 &-description {
@@ -111,13 +98,19 @@
                     line-height: 2rem;
                     color: #9B9B9B;
                     display: inline-block;
+                    transition: color .2s ease-in-out;
 
-                    img {
+                    svg {
                         margin-left: 1rem;
                         display: inline-block;
-                        width: 1.6rem;
+                        width: 1.7rem;
+                        height: .8rem;
                         height: auto;
                         object-fit: contain;
+
+                        path {
+                            transition: fill .2s ease-in-out;
+                        }
                     }
                 }
 
@@ -128,12 +121,6 @@
                     width: 5.8rem;
                     height: 5.1rem;
                     object-fit: contain;
-
-                    path {
-                        transition-property: fill, stroke;
-                        transition-duration: .2s;
-                        transition-timing-function: ease-in-out;
-                    }
                 }
             }
 
@@ -260,8 +247,6 @@
             bottom: auto;
             right: auto;
             width: 58.4rem;
-
-            &-img {}
 
             &-title {
                 margin-bottom: 2rem;

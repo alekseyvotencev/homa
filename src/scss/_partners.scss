@@ -4,7 +4,12 @@
     border-top: 1px solid #C4C4C4;
     overflow: hidden;
 
+    .container {
+        overflow: hidden;
+    }
+
     &__list {
+        padding-bottom: 1rem;
         width: 100%;
         display: flex;
         align-items: center;
@@ -16,11 +21,11 @@
 
         @keyframes running {
             0% {
-                transform: translateX(calc(100% + 26rem))
+                transform: translateX(100%)
             }
 
             100% {
-                transform: translateX(calc(-100% - 26rem))
+                transform: translateX(-100%)
             }
         }
 

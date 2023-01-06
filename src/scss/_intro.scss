@@ -77,12 +77,9 @@
         }
 
         &-slide {
-            display: flex;
-            flex-direction: column;
 
             &__top {
                 display: flex;
-                align-items: flex-start;
 
                 &-left {
                     padding-top: 5rem;
@@ -91,7 +88,6 @@
                     flex-direction: column;
                     align-items: flex-start;
                     width: 82rem;
-                    height: 100%;
                     background: linear-gradient(308.41deg, #E4EAF2 13.29%, #EFF3FA 79.9%);
 
                     &-title {
@@ -134,36 +130,55 @@
                     }
                 }
 
-                .intro__swiper-images {
-                    margin-left: 0;
-                    margin-right: 0;
+                &-right {
                     width: 94.5rem;
                     height: 53.6rem;
                     position: relative;
 
-                    &__slide {
+                    &-video {
                         width: 100%;
                         height: 100%;
+                        object-fit: cover;
+                    }
 
-                        &-video {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
+                    .intro__swiper-pagination {
+                        align-items: center;
+                        width: auto;
+                        bottom: 3rem;
+                        left: 50%;
+                        transform: translateX(-50%);
+
+                        .swiper-pagination-bullet {
+                            width: 1.4rem;
+                            height: 1.4rem;
+                            background-color: #E4EAF2;
+                            font-size: 0;
+                            transform: none;
+
+                            &:not(:last-child) {
+                                margin-right: 1.5rem;
+                            }
+
+                            &-active {
+                                background-color: #313131;
+                            }
                         }
                     }
 
-                    &__prev,
-                    &__next {
+                    .intro__swiper-prev,
+                    .intro__swiper-next {
                         position: absolute;
-                        top: 25rem;
+                        top: 50%;
+                        width: 4.6rem;
+                        height: 9rem;
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        width: 4.6rem;
-                        height: 10rem;
                         background-color: rgba(255, 255, 255, 0.8);
-                        z-index: 2;
+                        border-radius: 0;
+                        transform: translateY(-50%);
                         cursor: pointer;
+
 
                         svg {
                             width: 1.1rem;
@@ -172,40 +187,18 @@
                         }
                     }
 
-                    &__prev {
+                    .intro__swiper-prev {
                         left: 0;
                     }
 
-                    &__next {
+                    .intro__swiper-next {
                         right: 0;
-                    }
-
-                    &__pagination {
-                        bottom: 2.5rem;
-
-                        .swiper-pagination-bullet {
-                            margin: 0;
-                            width: 1.4rem;
-                            height: 1.4rem;
-                            background: none;
-                            background-color: #E4EAF2;
-                            opacity: 1;
-
-                            &-active {
-                                background-color: #313131;
-                            }
-
-                            &:not(:last-child) {
-                                margin-right: 1.5rem;
-                            }
-                        }
                     }
                 }
             }
 
             &__bottom {
                 display: flex;
-                align-items: flex-start;
 
                 &-left {
                     padding-left: 26rem;
@@ -215,7 +208,6 @@
                     align-items: flex-start;
                     justify-content: flex-end;
                     width: 82rem;
-                    height: 100%;
                     background-color: #FFF;
 
                     &-title {
@@ -404,14 +396,17 @@
                         }
                     }
 
-                    .intro__swiper-images {
+                    &-right {
                         width: 100%;
                         height: 42.2rem;
 
-                        &__prev,
-                        &__next {
-                            top: 50%;
-                            transform: translateY(-50%);
+                        .intro__swiper-pagination {
+                            display: none;
+                        }
+
+                        .intro__swiper-prev,
+                        .intro__swiper-next {
+                            display: none;
                         }
                     }
                 }
