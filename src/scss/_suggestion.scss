@@ -12,7 +12,7 @@
             margin-left: 4rem;
 
             &__item {
-                padding: 4rem 1rem 4rem 0;
+                padding: 4rem 1rem 4rem 1.6rem;
                 position: relative;
                 display: flex;
                 align-items: flex-start;
@@ -21,6 +21,10 @@
 
                 &:hover {
                     background-color: #F8F8F8;
+
+                    .suggestion__right-list__item-img {
+                        transform: scale(1.1);
+                    }
 
                     .suggestion__right-list__item-social {
                         opacity: 1;
@@ -39,6 +43,7 @@
                     width: 32rem;
                     height: 20rem;
                     object-fit: cover;
+                    transition: transform .2s ease-in-out;
                 }
 
                 &-title {

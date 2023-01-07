@@ -292,6 +292,12 @@
                 &-item {
                     max-width: 18.8rem;
 
+                    &[id="delivery"] {
+                        .product__right-advantages__list-item-icon {
+                            margin-top: 1rem;
+                        }
+                    }
+
                     &-icon {
                         margin-bottom: 2.7rem;
                         max-width: 6rem;
