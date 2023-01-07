@@ -31,7 +31,7 @@
 
             &__item {
                 margin-bottom: 4rem;
-                flex: 0 0 32rem;
+                flex: 0 0 31.9rem;
                 position: relative;
                 height: auto;
                 display: flex;
@@ -60,7 +60,7 @@
                     }
                 }
 
-                &:not(:nth-child(3n+3)) {
+                &:not(:nth-child(3n)) {
                     margin-right: 4rem;
                 }
 

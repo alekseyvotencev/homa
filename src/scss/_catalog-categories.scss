@@ -64,20 +64,12 @@
                             margin-bottom: 1.5rem;
                         }
 
+
                         &.acc_active {
                             .catalog__categories-accordion__item-sublist-item-head {
-                                p {
-                                    font-weight: 400;
-                                    color: #E30613
-                                }
-
                                 button {
                                     svg {
                                         transform: rotate(90deg);
-
-                                        path {
-                                            stroke: #E30613;
-                                        }
                                     }
                                 }
                             }
@@ -89,15 +81,27 @@
                             justify-content: space-between;
                             cursor: pointer;
 
+                            &:hover {
+                                p {
+                                    color: #E30613;
+                                }
+
+                                button {
+                                    svg {
+                                        path {
+                                            stroke: #E30613;
+                                        }
+                                    }
+                                }
+                            }
+
                             p {
                                 width: 21.8rem;
                                 font-weight: 350;
                                 font-size: 1.6rem;
                                 line-height: 1.9rem;
                                 color: #313131;
-                                transition-property: color, font-weight;
-                                transition-duration: .2s;
-                                transition-timing-function: ease-in-out;
+                                transition: color .2s ease-in-out;
                             }
 
                             button {

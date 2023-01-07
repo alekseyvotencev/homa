@@ -68,85 +68,6 @@
 
     }
 
-    .sorting-select__container {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        display: flex;
-        align-items: center;
-
-        span {
-            margin-right: .5rem;
-            font-size: 1.4rem;
-            line-height: 1.9rem;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            color: #B5B5B5;
-        }
-
-        .choices {
-            width: max-content;
-            font-size: 1.4rem;
-            line-height: 1.9rem;
-            overflow: visible;
-
-            &::after {
-                content: none;
-            }
-
-            &::before {
-                content: '';
-                position: absolute;
-                top: 1.4rem;
-                right: 0;
-                width: 1.3rem;
-                height: .7rem;
-                background-image: url(../images/svg/select-arrow.svg);
-                background-size: contain;
-                background-position: center;
-                background-repeat: no-repeat;
-            }
-
-            &__placeholder {
-                opacity: 1;
-                color: #313131;
-            }
-
-            &__inner {
-                padding: 0;
-                min-height: auto;
-                border: none;
-                font-size: 1.4rem;
-                line-height: 1.9rem;
-                background-color: transparent;
-            }
-
-            &__list {
-                width: max-content;
-                border: none;
-
-                &--single {
-                    padding: 0;
-                    padding-right: 2rem;
-                    text-transform: uppercase;
-                    text-align: right;
-                }
-
-                &--dropdown {
-                    word-break: unset;
-                }
-            }
-
-            &__item {
-                padding: 1rem;
-                font-size: 1.4rem;
-                line-height: 1.9rem;
-                color: #313131;
-                text-transform: uppercase;
-            }
-        }
-    }
-
     @media (max-width:48em) {
         padding-top: 4rem;
         padding-bottom: 4rem;
@@ -178,40 +99,6 @@
         &__heading {
             font-size: 6.6rem;
             line-height: 7.2rem;
-        }
-
-
-        .sorting-select__container {
-            margin-top: 8.2rem;
-            position: relative;
-
-            span {
-                font-size: 2.8rem;
-                line-height: 3.8rem;
-            }
-
-            .choices {
-                font-size: 2.8rem;
-                line-height: 3.8rem;
-
-                &::before {
-                    top: 2rem;
-                    right: -1rem;
-                    width: 2.6rem;
-                    height: 1.4rem;
-                }
-
-
-                &__inner {
-                    font-size: 2.8rem;
-                    line-height: 3.8rem;
-                }
-
-                &__item {
-                    font-size: 2.8rem;
-                    line-height: 3.8rem;
-                }
-            }
         }
     }
 
