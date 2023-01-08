@@ -49,15 +49,6 @@ const introSwiper = new Swiper('.intro__swiper', {
                     }
                 }
             },
-            // pagination: {
-            //     renderBullet: function (index, className) {
-            //         if (index < 10) {
-            //             return '<span class="' + className + '">' + '0' + (index + 1) + '</span>';
-            //         } else {
-            //             return '<span class="' + className + '">' + (index + 1) + '</span>';
-            //         }
-            //     }
-            // },
         }
     },
     on: {

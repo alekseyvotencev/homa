@@ -28,16 +28,36 @@ document.addEventListener('DOMContentLoaded', function () {
     if (document.querySelector('#map')) {
         ymaps.ready(init);
         function init() {
-            var myMap = new ymaps.Map("map", {
+            const myMap = new ymaps.Map("map", {
                 center: [55.678402, 37.853416],
                 zoom: 14
             });
 
-            var dzerzhinskMap = new ymaps.Map("dzerzhinsk-map", {
+            const dzerzhinskMap = new ymaps.Map("dzerzhinsk-map", {
                 center: [56.290484, 43.603766],
                 zoom: 14
             });
+
+            const homaPlacemark = new ymaps.Placemark([55.678402, 37.853416], {},
+                {
+                    iconLayout: 'default#image',
+                    // Своё изображение иконки метки.
+                    iconImageHref: '../images/svg/homaPoint.svg',
+                    // Размеры метки.
+                    iconImageSize: [rem(13.2), rem(8.5)],
+                    // Смещение левого верхнего угла иконки относительно
+                    // её "ножки" (точки привязки).
+                    iconImageOffset: [rem(-5), rem(-4)]
+                })
+
+            myMap.geoObjects.add(homaPlacemark);
+
+            const dzerzhinskPlacemark = new ymaps.Placemark([56.290484, 43.603766], null, {
+                preset: 'islands#redDotIcon'
+            });
+            dzerzhinskMap.geoObjects.add(dzerzhinskPlacemark);
         }
+
 
     }
 
@@ -55,7 +75,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 tab.parentElement.classList.remove('active');
             })
 
-            e.path[1].classList.add('active');
+            tabsBtns.forEach(tabBtn => {
+                if (tabBtn.parentElement.dataset.path === path) {
+                    tabBtn.parentElement.classList.add('active');
+                }
+            })
 
             if (path === 'main') {
                 dzerzhinsk.forEach(element => {
