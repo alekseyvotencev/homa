@@ -6,6 +6,7 @@
 
     .container {
         overflow: hidden;
+        display: flex;
     }
 
     &__list {
@@ -13,23 +14,30 @@
         width: 100%;
         display: flex;
         align-items: center;
-        justify-content: space-between;
         animation-name: running;
-        animation-duration: 30s;
+        animation-duration: 15s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
 
+        &:first-child {
+            margin-right: 9rem;
+        }
+
         @keyframes running {
             0% {
-                transform: translateX(100%)
+                transform: translateX(0)
             }
 
             100% {
-                transform: translateX(-100%)
+                transform: translateX(calc(-100% - 9rem))
             }
         }
 
         &-item {
+
+            &:not(:last-child) {
+                margin-right: 9rem;
+            }
 
             &:hover {
                 a {
@@ -63,10 +71,14 @@
         padding-top: 4rem;
         padding-bottom: 4rem;
 
+        .container {
+            width: 200%;
+        }
+
         &__list {
-            justify-content: flex-start;
+            width: 100%;
             flex-wrap: wrap;
-            animation-duration: 10s;
+            animation-duration: 5s;
 
             &-item {
                 &:nth-child(3n+1) {
@@ -90,16 +102,6 @@
                 margin-left: auto;
                 margin-right: auto;
 
-            }
-
-            @keyframes running {
-                0% {
-                    transform: translateX(calc(100% + 3rem))
-                }
-
-                100% {
-                    transform: translateX(calc(-100% - 3rem))
-                }
             }
         }
     }
