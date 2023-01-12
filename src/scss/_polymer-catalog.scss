@@ -120,10 +120,13 @@
                 display: flex;
                 justify-content: space-between;
                 border: 1px solid #CCCCCC;
-                transition: border-color .2s ease-in-out;
+                transition-property: border-color, background-color;
+                transition-duration: .2s;
+                transition-timing-function: ease-in-out;
 
                 &:hover {
                     border-color: #E30613;
+                    background-color: #F8F8F8;
 
                     .polymer-catalog__right-list2__item-left-link {
                         color: #E30613;
@@ -143,23 +146,27 @@
                 &-left {
                     margin-top: 2.1rem;
                     width: 32rem;
+                    display: flex;
+                    flex-direction: column;
 
                     &-title {
                         margin-bottom: 1rem;
                         font-weight: 700;
                         font-size: 3rem;
                         line-height: 4.4rem;
-                        text-transform: lowercase;
                     }
 
                     &-description {
                         margin-bottom: 1.8rem;
-                        font-size: 1.7rem;
-                        line-height: 2.4rem;
+                        font-size: 1.5rem;
+                        line-height: 2.1rem;
                         color: #8D8D8D;
+                        text-transform: uppercase;
                     }
 
                     &-link {
+                        margin-top: auto;
+                        margin-bottom: 4rem;
                         display: flex;
                         align-items: center;
                         font-weight: 700;

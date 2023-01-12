@@ -364,9 +364,12 @@
 
             &-list {
                 display: flex;
-                align-items: flex-start;
+                align-items: stretch;
 
                 &__item {
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: column;
 
                     &:first-child {
                         margin-right: 7.1rem;
@@ -397,8 +400,27 @@
                     }
 
                     &-description {
+                        margin-bottom: 3rem;
                         font-size: 1.7rem;
                         line-height: 2.5rem;
+                    }
+
+                    &-btn {
+                        margin-top: auto;
+                        padding: 1.3rem 5.9rem;
+                        font-size: 1.7rem;
+                        line-height: 2.5rem;
+                        color: #313131;
+                        background-color: transparent;
+                        border: 2px solid #E30613;
+                        transition-property: color, background-color;
+                        transition-duration: .2s;
+                        transition-timing-function: ease-in-out;
+
+                        &:hover {
+                            background-color: #E30613;
+                            color: #FFF;
+                        }
                     }
                 }
             }
@@ -698,6 +720,7 @@
 
                 &-list {
                     flex-direction: column;
+                    align-items: flex-start;
 
                     &__item {
                         width: 57.4rem;
@@ -734,8 +757,15 @@
                         }
 
                         &-description {
+                            margin-bottom: 3rem;
                             font-size: 3.4rem;
                             line-height: 5rem;
+                        }
+
+                        &-btn {
+                            padding: 2.5rem 12rem;
+                            font-size: 3.4rem;
+                            line-height: 3.9rem;
                         }
                     }
                 }

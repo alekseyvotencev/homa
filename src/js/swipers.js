@@ -315,6 +315,7 @@ staff.forEach(swiperStaff => {
         direction: 'horizontal',
         speed: 500,
         loop: false,
+        slidesPerGroup: 3,
 
         navigation: {
             nextEl: '.swiper__staff-next',
