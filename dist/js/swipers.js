@@ -342,6 +342,131 @@ staff.forEach(swiperStaff => {
     });
 })
 
+// Пресс-центр
+
+const swiperExperts = new Swiper('.press-main__experts', {
+    direction: 'horizontal',
+    speed: 500,
+    allowTouchMove: false,
+    loop: false,
+    spaceBetween: rem(4),
+
+    navigation: {
+        nextEl: '.press-main__experts-next',
+        prevEl: '.press-main__experts-prev',
+    },
+
+    pagination: {
+        el: '.press-main__experts-pagination',
+        type: 'custom',
+        renderCustom: function (swiper, current, total) {
+            return `<span class="current">${getTwoDigitNumber(current)}</span><span class="total">${getTwoDigitNumber(total)}</span>`;
+        }
+    },
+
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        769: {
+            slidesPerView: 'auto',
+        }
+    }
+});
+
+const swiperMedia = new Swiper('.press-main__media', {
+    direction: 'horizontal',
+    speed: 500,
+    allowTouchMove: false,
+    loop: false,
+    spaceBetween: rem(4),
+
+    navigation: {
+        nextEl: '.press-main__media-next',
+        prevEl: '.press-main__media-prev',
+    },
+
+    pagination: {
+        el: '.press-main__media-pagination',
+        type: 'custom',
+        renderCustom: function (swiper, current, total) {
+            return `<span class="current">${getTwoDigitNumber(current)}</span><span class="total">${getTwoDigitNumber(total)}</span>`;
+        }
+    },
+
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        769: {
+            slidesPerView: 'auto',
+        }
+    }
+});
+
+const swiperPhoto = new Swiper('.press-main__photo', {
+    direction: 'horizontal',
+    speed: 500,
+    allowTouchMove: false,
+    loop: false,
+
+    navigation: {
+        nextEl: '.press-main__photo-next',
+        prevEl: '.press-main__photo-prev',
+    },
+
+    pagination: {
+        el: '.press-main__photo-pagination',
+        type: 'custom',
+        renderCustom: function (swiper, current, total) {
+            return `<span class="current">${getTwoDigitNumber(current)}</span><span class="total">${getTwoDigitNumber(total)}</span>`;
+        }
+    },
+
+    breakpoints: {
+        320: {
+            slidesPerView: 2,
+            spaceBetween: rem(3),
+        },
+        769: {
+            slidesPerView: 'auto',
+            spaceBetween: rem(4),
+        }
+    }
+});
+
+const swiperAbout = new Swiper('.press-main__about', {
+    direction: 'horizontal',
+    speed: 500,
+    allowTouchMove: false,
+    loop: false,
+
+    navigation: {
+        nextEl: '.press-main__about-next',
+        prevEl: '.press-main__about-prev',
+    },
+
+    pagination: {
+        el: '.press-main__about-pagination',
+        type: 'custom',
+        renderCustom: function (swiper, current, total) {
+            return `<span class="current">${getTwoDigitNumber(current)}</span><span class="total">${getTwoDigitNumber(total)}</span>`;
+        }
+    },
+
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            slidesPerColumn: 1,
+            spaceBetween: rem(3),
+        },
+        769: {
+            slidesPerView: 'auto',
+            slidesPerColumn: 5
+        }
+    }
+});
+
 
 
 
