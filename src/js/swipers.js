@@ -467,6 +467,128 @@ const swiperAbout = new Swiper('.press-main__about', {
     }
 });
 
+// слайдеры на странице Проекты
+
+const swiperEvents = new Swiper('.projects-main__events', {
+    direction: 'horizontal',
+    speed: 500,
+    allowTouchMove: false,
+    loop: false,
+    spaceBetween: rem(4.1),
+
+    navigation: {
+        nextEl: '.projects-main__events-next',
+        prevEl: '.projects-main__events-prev',
+    },
+
+    pagination: {
+        el: '.projects-main__events-pagination',
+        type: 'custom',
+        renderCustom: function (swiper, current, total) {
+            return `<span class="current">${getTwoDigitNumber(current)}</span><span class="total">${getTwoDigitNumber(total)}</span>`;
+        }
+    },
+
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        769: {
+            slidesPerView: 'auto',
+        }
+    }
+});
+
+const swiperGlue = new Swiper('.projects-main__glue', {
+    direction: 'horizontal',
+    speed: 500,
+    allowTouchMove: false,
+    loop: false,
+    spaceBetween: rem(4.1),
+
+    navigation: {
+        nextEl: '.projects-main__glue-next',
+        prevEl: '.projects-main__glue-prev',
+    },
+
+    pagination: {
+        el: '.projects-main__glue-pagination',
+        type: 'custom',
+        renderCustom: function (swiper, current, total) {
+            return `<span class="current">${getTwoDigitNumber(current)}</span><span class="total">${getTwoDigitNumber(total)}</span>`;
+        }
+    },
+
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        769: {
+            slidesPerView: 'auto',
+        }
+    }
+});
+
+const swiperObjects = new Swiper('.projects-main__objects', {
+    direction: 'horizontal',
+    speed: 500,
+    allowTouchMove: false,
+    loop: false,
+    spaceBetween: rem(4.1),
+
+    navigation: {
+        nextEl: '.projects-main__objects-next',
+        prevEl: '.projects-main__objects-prev',
+    },
+
+    pagination: {
+        el: '.projects-main__objects-pagination',
+        type: 'custom',
+        renderCustom: function (swiper, current, total) {
+            return `<span class="current">${getTwoDigitNumber(current)}</span><span class="total">${getTwoDigitNumber(total)}</span>`;
+        }
+    },
+
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        769: {
+            slidesPerView: 'auto',
+        }
+    }
+});
+
+const swiperHomakoll = new Swiper('.projects-main__homakoll', {
+    direction: 'horizontal',
+    speed: 500,
+    allowTouchMove: false,
+    loop: false,
+    spaceBetween: rem(4.1),
+
+    navigation: {
+        nextEl: '.projects-main__homakoll-next',
+        prevEl: '.projects-main__homakoll-prev',
+    },
+
+    pagination: {
+        el: '.projects-main__homakoll-pagination',
+        type: 'custom',
+        renderCustom: function (swiper, current, total) {
+            return `<span class="current">${getTwoDigitNumber(current)}</span><span class="total">${getTwoDigitNumber(total)}</span>`;
+        }
+    },
+
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        769: {
+            slidesPerView: 'auto',
+        }
+    }
+});
+
 
 
 
