@@ -592,4 +592,3 @@ const swiperHomakoll = new Swiper('.projects-main__homakoll', {
 
 
 
-
