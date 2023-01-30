@@ -103,6 +103,10 @@
                 }
             }
         }
+
+        &__btn {
+            cursor: pointer;
+        }
     }
 
     @media (max-width: 48em) {

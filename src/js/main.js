@@ -120,4 +120,135 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
+
+    // модалка отклика на вакансии (страницы Вакансия и Страница вакансии)
+
+    if (document.querySelector('.modal-response')) {
+        const modalResponse = document.querySelector('.modal-response');
+
+        const responseVacancyBtn = document.querySelector('.vacancy-page__main-right__btn');
+
+        responseVacancyBtn.addEventListener('click', function () {
+            modalResponse.classList.add('active');
+            document.body.classList.add('lock');
+        })
+
+        const modalCloseBtn = document.querySelector('.modal-response .modal__close-btn');
+        modalCloseBtn.addEventListener('click', function () {
+            modalResponse.classList.remove('active');
+            document.body.classList.remove('lock');
+        })
+
+        const inputFile = document.querySelector('#resume-file');
+        const label = inputFile.nextElementSibling;
+        const labelVal = label.innerHTML;
+
+        inputFile.addEventListener('change', function (e) {
+            var fileName = '';
+            if (this.files && this.files.length > 1)
+                fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+            else {
+                console.log(e)
+                fileName = e.target.value.split('\\').pop();
+            }
+
+
+            if (fileName)
+                label.querySelector('span').innerHTML = fileName;
+            else
+                label.innerHTML = labelVal;
+        });
+    }
+
+    // модалка об ошибке нас странице Чем приклеить ПВХ плитку
+
+    if (document.querySelector('.modal-mistake')) {
+        const modalResponse = document.querySelector('.modal-mistake');
+
+        const mistakeBtn = document.querySelector('.qa__btn-error');
+
+        mistakeBtn.addEventListener('click', function () {
+            modalResponse.classList.add('active');
+            document.body.classList.add('lock');
+        })
+
+        const modalCloseBtn = document.querySelector('.modal-mistake .modal__close-btn');
+        modalCloseBtn.addEventListener('click', function () {
+            modalResponse.classList.remove('active');
+            document.body.classList.remove('lock');
+        })
+    }
+
+    // модалка заявку не техподдержку на Главной
+    if (document.querySelector('.modal-request')) {
+        const modalRequest = document.querySelector('.modal-request');
+
+        const requestBtn = document.querySelector('.support__left-links__request');
+
+        requestBtn.addEventListener('click', function () {
+            modalRequest.classList.add('active');
+            document.body.classList.add('lock');
+        })
+
+        const modalCloseBtn = document.querySelector('.modal-request .modal__close-btn');
+        modalCloseBtn.addEventListener('click', function () {
+            modalRequest.classList.remove('active');
+            document.body.classList.remove('lock');
+        })
+    }
+
+    // модалка запроса тех описания на Странице товара
+    if (document.querySelector('.modal-description')) {
+        const modalDescription = document.querySelector('.modal-description');
+
+        // десктоп
+        const descriptionBtn = document.querySelector('.product__right-card__right-actions-email');
+
+        descriptionBtn.addEventListener('click', function () {
+            modalDescription.classList.add('active');
+            document.body.classList.add('lock');
+        })
+
+        const modalCloseBtn = document.querySelector('.modal-description .modal__close-btn');
+        modalCloseBtn.addEventListener('click', function () {
+            modalDescription.classList.remove('active');
+            document.body.classList.remove('lock');
+        })
+
+        // мобилка
+
+        const descriptionMobileBtn = document.querySelector('.product__right-card__left-actions-email');
+
+        descriptionMobileBtn.addEventListener('click', function () {
+            modalDescription.classList.add('active');
+            document.body.classList.add('lock');
+        })
+    }
+
+    // модалка задать вопрос на Странице товара ()
+    if (document.querySelector('.modal-question')) {
+
+        // десктоп
+        const modalQuestion = document.querySelector('.modal-question');
+
+        const questionBtn = document.querySelector('.product__right-card__right-actions-question');
+
+        questionBtn.addEventListener('click', function () {
+            modalQuestion.classList.add('active');
+            document.body.classList.add('lock');
+        })
+
+        const modalCloseBtn = document.querySelector('.modal-question .modal__close-btn');
+        modalCloseBtn.addEventListener('click', function () {
+            modalQuestion.classList.remove('active');
+            document.body.classList.remove('lock');
+        })
+
+        // мобилка
+        const questionMobileBtn = document.querySelector('.product__right-card__left-actions-question');
+        questionMobileBtn.addEventListener('click', function () {
+            modalQuestion.classList.add('active');
+            document.body.classList.add('lock');
+        })
+    }
 })
