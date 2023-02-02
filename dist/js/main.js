@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     // переключаение языков
-    const rusBtn = document.querySelector('.header__top-rus');
-    const enBtn = document.querySelector('.header__top-en');
+    const rusBtn = document.querySelector('.header__top-btns .rus');
+    const enBtn = document.querySelector('.header__top-btns .en');
 
     enBtn.addEventListener('click', function () {
         rusBtn.classList.remove('active');
@@ -13,6 +13,157 @@ document.addEventListener('DOMContentLoaded', function () {
         enBtn.classList.remove('active');
         rusBtn.classList.add('active');
     })
+
+    // анимация на Главной
+
+    const gearAnimation = (function () {
+        const animation = anime.timeline({
+            autoplay: false,
+            easing: 'linear',
+            loop: true,
+        }).add({
+            targets: '#gear',
+            rotate: [
+                { value: 360, duration: 4000 },
+            ],
+        });
+
+        return animation;
+    })();
+
+    const stat = (function () {
+        const animation = anime.timeline({
+            autoplay: false,
+            loop: true,
+        }).add({
+            targets: '#stat path:nth-child(1)',
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: 'easeOutSine',
+            duration: 400,
+            delay: function (el, i) { return i * 250 },
+        }).add({
+            targets: '#stat path:nth-child(2)',
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: 'easeOutSine',
+            duration: 400,
+            delay: function (el, i) { return i * 250 },
+        }).add({
+            targets: '#stat path:nth-child(3)',
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: 'easeOutSine',
+            duration: 400,
+            delay: function (el, i) { return i * 250 },
+        }).add({
+            targets: '#stat path:nth-child(4)',
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: 'easeOutSine',
+            duration: 400,
+            delay: function (el, i) { return i * 250 },
+        }).add({
+            targets: '#stat path:nth-child(5)',
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: 'easeOutSine',
+            duration: 400,
+            delay: function (el, i) { return i * 250 },
+        }).add({
+            targets: '#stat path:nth-child(6)',
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: 'easeOutSine',
+            duration: 400,
+            delay: function (el, i) { return i * 250 },
+        }).add({
+            targets: '#stat path:nth-child(7)',
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: 'easeOutSine',
+            duration: 400,
+            delay: function (el, i) { return i * 250 },
+        }).add({
+            duration: 2000,
+        });
+
+        animation.seek(4790);
+
+        return animation;
+    })();
+
+    const shieldAnimation = (function () {
+        const animation = anime.timeline({
+            autoplay: false,
+            loop: true,
+            easing: 'easeOutSine',
+        }).add({
+            targets: '#shield span',
+            delay: 1000,
+            loop: true,
+            translateY: [
+                { value: '100%', duration: 0 },
+                { value: '0%', duration: 700 },
+                { value: '-100%', duration: 700 },
+            ],
+            rotate: [
+                { value: 30, duration: 0 }
+            ]
+        });
+
+        return animation;
+    })();
+
+    const bubble1 = (function () {
+        const animation = anime.timeline({
+            autoplay: false,
+            easing: 'easeOutSine',
+            loop: true,
+            delay: 700,
+        }).add({
+            targets: '#bubbles svg:nth-child(1)',
+            translateY: [
+                { value: 0, duration: 0 },
+                { value: rem(-2.2), duration: 800 },
+            ],
+        });
+
+        return animation;
+    })();
+
+    const bubble2 = (function () {
+        const animation = anime.timeline({
+            autoplay: false,
+            easing: 'easeOutSine',
+            loop: true,
+            delay: 700,
+        }).add({
+            targets: '#bubbles svg:nth-child(2)',
+            loop: true,
+            translateY: [
+                { value: 0, duration: 0 },
+                { value: rem(-1.8), duration: 1200 },
+            ],
+        });
+
+        return animation;
+    })();
+
+    $('.advantages__list-item.gear').hover(function () {
+        gearAnimation.play();
+    }, function () {
+        gearAnimation.pause();
+    });
+
+    $('.advantages__list-item.stat').hover(function () {
+        stat.play();
+    }, function () {
+        stat.pause();
+    });
+
+    $('.advantages__list-item.bubbles').hover(function () {
+        shieldAnimation.play();
+        bubble1.play();
+        bubble2.play();
+    }, function () {
+        shieldAnimation.pause();
+        bubble1.pause();
+        bubble2.pause();
+    });
 
     // селект на странице ...
     if (document.querySelector('.sorting-select')) {
@@ -250,5 +401,33 @@ document.addEventListener('DOMContentLoaded', function () {
             modalQuestion.classList.add('active');
             document.body.classList.add('lock');
         })
+    }
+
+    // обрезать кол-во символов на странице Поиск в результатах
+
+    if (document.querySelector('.search-main__list-item__description')) {
+        const descriptions = document.querySelectorAll('.search-main__list-item__description');
+        for (let i = 0; i < descriptions.length; i++) {
+            if (descriptions[i].innerText.length > 228) {
+                descriptions[i].innerText = descriptions[i].innerText.substring(0, 228);
+                descriptions[i].innerText += '...';
+            }
+        }
+    }
+
+    // обрезать кол-во слов в моб версии на странице Отзывы
+
+    if (document.querySelector('.reviews-main__list-item__description')) {
+        const reviews = document.querySelectorAll('.reviews-main__list-item__description');
+        for (let i = 0; i < reviews.length; i++) {
+            let count = 0;
+            const splittedReview = reviews[i].innerText.split(' ');
+            for (let i = 0; i < splittedReview.length; i++) {
+                if (splittedReview[i] != '') count += 1;
+            }
+            if (count > 9) {
+                reviews[i].innerText = reviews[i].innerText.split(splittedReview[9])[0];
+            }
+        }
     }
 })

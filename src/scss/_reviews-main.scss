@@ -63,7 +63,7 @@
                 color: #000000;
             }
 
-            &__link {
+            &__download {
                 display: flex;
                 align-items: center;
 
@@ -210,12 +210,21 @@
                 }
 
                 &__description {
-                    margin-bottom: 3.8rem;
+                    margin-bottom: 0;
                     font-size: 3.6rem;
                     line-height: 5.2rem;
                 }
 
                 &__link {
+                    margin-bottom: 4rem;
+                    display: inline-block;
+                    font-size: 3rem;
+                    line-height: 5.2rem;
+                    text-decoration-line: underline;
+                    color: #8D8D8D;
+                }
+
+                &__download {
                     svg {
                         &:first-child {
                             width: 7.6rem;
