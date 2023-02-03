@@ -31,6 +31,7 @@
                 margin-right: 18.7rem;
             }
 
+
             &:hover {
                 cursor: pointer;
 
@@ -209,16 +210,69 @@
 
                     &::after {
                         left: 0;
-                        top: calc(50% + 7rem);
+                        top: calc(50% + 6rem);
                         width: 1px;
                         height: 30rem;
                     }
                 }
 
-                &__icon {
-                    margin-bottom: 1rem;
-                    width: 16.4rem;
-                    height: 15rem;
+                &.gear {
+                    .advantages__list-item__icon-box {
+                        width: 13.2rem;
+                        height: 11rem;
+
+                        #gear {
+                            right: -2.8rem;
+                            top: -4rem;
+                            width: 7.8rem;
+                            height: 7.6rem;
+                        }
+                    }
+                }
+
+
+                &.stat {
+                    .advantages__list-item__icon-box {
+                        width: 13.4rem;
+                        height: 10.8rem;
+
+                        #stat {
+                            top: -4.2rem;
+                            width: 13.4rem;
+                            height: 9.8rem;
+                        }
+                    }
+                }
+
+                &.bubbles {
+                    .advantages__list-item__icon-box {
+                        width: 12rem;
+                        height: 11rem;
+
+                        #bubbles {
+                            left: 2rem;
+                            width: 4rem;
+                            height: 8rem;
+                        }
+
+                        #shield {
+                            right: 4rem;
+                            top: 2rem;
+                            width: 1.8rem;
+                            height: 6.8rem;
+
+                            span {
+                                right: -4rem;
+                                width: 10rem;
+                            }
+                        }
+                    }
+                }
+
+
+
+                &__icon-box {
+                    margin-bottom: 4rem;
                 }
 
                 &__point {
