@@ -51,7 +51,7 @@
                 .timeline2__list-item__right {
                     width: 65rem;
 
-                    .timeline2__list-item__right-text {
+                    &-text {
                         margin-left: auto;
                         width: 50rem;
                     }
@@ -136,8 +136,6 @@
                 }
             }
 
-          
-
             &__right {
                 margin-top: 10.7rem;
 
@@ -170,9 +168,63 @@
                     }
                 }
 
+                &:nth-child(odd) {
+                    .timeline2__list-item__left {
+                        // text-align: right;
+
+                        &-year {
+                            width: 100%;
+                        }
+
+                        &-title {
+                            width: 100%;
+                        }
+                        &-container {
+                            flex-direction: column-reverse;
+                        }
+                        &-img {
+                            margin-right: 0;
+                        }
+                    }
+
+                    .timeline2__list-item__right {
+                        width: 30rem;
+                        margin-right: 0;
+
+                        &-text {
+                            width: 100%;
+                        }
+                    }
+                }
+
                 &:nth-child(2n) {
                     .timeline2__list-item__left {
                         transform: none;
+
+                        &-year {
+                            text-align: left;
+                            width: 100%;
+                        }
+
+                        &-title {
+                            text-align: left;
+                            width: 100%;
+                        }
+                        &-container {
+                            flex-direction: column-reverse;
+                        }
+                        &-img {
+                            margin-left: 0;
+                        }
+                    }
+
+                    .timeline2__list-item__right {
+                        width: 30rem;
+                        margin-left: 0;
+
+                        &-text {
+                            width: 100%;
+                        }
                     }
                 }
 
@@ -185,6 +237,7 @@
 
                 &__left {
                     align-items: flex-start;
+                    width: 30rem;
 
                     &-year {
                         margin-bottom: 1rem;
