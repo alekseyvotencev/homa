@@ -77,11 +77,13 @@ const swiperNews = new Swiper('.swiper__news', {
     breakpoints: {
         320: {
             slidesPerView: 2,
-            spaceBetween: rem(2.5)
+            spaceBetween: rem(2.5),
+            slidesPerGroup: 2,
         },
         769: {
             slidesPerView: 4,
-            spaceBetween: rem(3.3)
+            spaceBetween: rem(3.3),
+            slidesPerGroup: 4,
         }
     }
 });
