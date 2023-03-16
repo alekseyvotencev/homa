@@ -12,7 +12,7 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
-            border-bottom: .1rem solid #C4C4C4;
+            border-bottom: 0.1rem solid #c4c4c4;
 
             &:first-child {
                 padding-top: 0;
@@ -56,23 +56,21 @@
 
                 &:hover {
                     svg {
-
                         circle,
                         path {
-                            stroke: #E30613;
+                            stroke: #e30613;
                         }
 
                         &:last-child {
                             path {
                                 stroke: none;
-                                fill: #E30613;
+                                fill: #e30613;
                             }
                         }
-
                     }
 
                     span {
-                        color: #E30613;
+                        color: #e30613;
                     }
                 }
 
@@ -86,7 +84,7 @@
 
                     &:nth-child(2) {
                         margin-left: -3.9rem;
-                        margin-right: .9rem;
+                        margin-right: 0.9rem;
                         width: 2.2rem;
                         height: 2rem;
                     }
@@ -99,18 +97,17 @@
                     circle,
                     path {
                         transition-property: fill, stroke;
-                        transition-duration: .2s;
+                        transition-duration: 0.2s;
                         transition-timing-function: ease-in-out;
                     }
-
                 }
 
                 span {
-                    margin-right: .9rem;
+                    margin-right: 0.9rem;
                     font-size: 1.7rem;
                     line-height: 2.5rem;
-                    background-color: #FFF;
-                    transition: color .2s ease-in-out;
+                    background-color: #fff;
+                    transition: color 0.2s ease-in-out;
                 }
             }
 
@@ -120,17 +117,21 @@
 
                 &:hover {
                     svg {
-
-                        &:last-child {
-                            path {
-                                fill: #E30613;
+                        &:not(:last-child) {
+                            path,
+                            circle {
+                                stroke: #e30613;
                             }
                         }
-
+                        &:last-child {
+                            path {
+                                fill: #e30613;
+                            }
+                        }
                     }
 
                     span {
-                        color: #E30613;
+                        color: #e30613;
                     }
                 }
 
@@ -143,11 +144,18 @@
                     }
 
                     &:nth-child(2) {
-                        margin-top: -.4rem;
+                        margin-top: -0.4rem;
                         margin-left: -3.8rem;
-                        margin-right: .9rem;
+                        margin-right: 0.9rem;
                         width: 2.2rem;
                         height: 1.9rem;
+                    }
+
+                    &:not(:last-child) {
+                        path,
+                        circle {
+                            transition: stroke 0.2s ease-in-out;
+                        }
                     }
 
                     &:last-child {
@@ -155,17 +163,17 @@
                         height: 1rem;
 
                         path {
-                            transition: fill .2s ease-in-out;
+                            transition: fill 0.2s ease-in-out;
                         }
                     }
                 }
 
                 span {
-                    margin-right: .9rem;
+                    margin-right: 0.9rem;
                     font-size: 1.7rem;
                     line-height: 2.5rem;
-                    transition: color .2s ease-in-out;
-                    background-color: #FFF;
+                    transition: color 0.2s ease-in-out;
+                    background-color: #fff;
                 }
             }
 
@@ -191,7 +199,7 @@
                         &:hover {
                             svg {
                                 path {
-                                    fill: #E30613;
+                                    fill: #e30613;
                                 }
                             }
                         }
@@ -201,7 +209,7 @@
                             height: 1.6rem;
 
                             path {
-                                transition: fill .2s ease-in-out;
+                                transition: fill 0.2s ease-in-out;
                             }
                         }
                     }
@@ -213,7 +221,7 @@
     @media (max-width: 48em) {
         padding-top: 6rem;
         padding-bottom: 20rem;
-        border-top: .2rem solid #C4C4C4;
+        border-top: 0.2rem solid #c4c4c4;
 
         &__list {
             margin: 0;
@@ -225,7 +233,7 @@
                 padding-bottom: 6rem;
                 flex-direction: column;
                 justify-content: flex-start;
-                border-bottom: .2rem solid #C4C4C4;
+                border-bottom: 0.2rem solid #c4c4c4;
 
                 &__img {
                     margin-bottom: 4rem;
@@ -370,7 +378,7 @@
                 }
 
                 .total {
-                    font-family: 'Circe';
+                    font-family: "Circe";
                     font-size: 3rem;
                     line-height: 4.8rem;
                     color: #000000;

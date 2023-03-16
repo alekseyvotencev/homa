@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 {
                     iconLayout: 'default#image',
                     // Своё изображение иконки метки.
-                    iconImageHref: '../images/svg/homaPoint.svg',
+                    iconImageHref: '/src/images/svg/homaPoint.svg',
                     // Размеры метки.
                     iconImageSize: [rem(13.2), rem(8.5)],
                     // Смещение левого верхнего угла иконки относительно
@@ -417,7 +417,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // обрезать кол-во слов в моб версии на странице Отзывы
 
-    if (document.querySelector('.reviews-main__list-item__description')) {
+    if (document.querySelector('.reviews-main__list-item__description') && window.innerWidth <= 768) {
         const reviews = document.querySelectorAll('.reviews-main__list-item__description');
         for (let i = 0; i < reviews.length; i++) {
             let count = 0;

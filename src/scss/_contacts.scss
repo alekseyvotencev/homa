@@ -15,13 +15,13 @@
             position: relative;
 
             &::after {
-                content: '';
+                content: "";
                 position: absolute;
                 top: 0;
                 left: -26rem;
                 width: 58rem;
                 height: 100%;
-                background-color: #F8F8F8;
+                background-color: #f8f8f8;
                 z-index: -1;
             }
 
@@ -39,18 +39,16 @@
             &-list {
                 &__item {
                     &.active {
-
                         button {
-                            color: #E30613;
+                            color: #e30613;
                         }
-
                     }
 
                     button {
                         font-weight: 700;
                         font-size: 1.7rem;
                         line-height: 4rem;
-                        transition: color .2s ease-in-out;
+                        transition: color 0.2s ease-in-out;
                     }
                 }
             }
@@ -98,10 +96,10 @@
                         a {
                             font-size: 1.8rem;
                             line-height: 2.4rem;
-                            transition: color .2s ease-in-out;
+                            transition: color 0.2s ease-in-out;
 
                             &:hover {
-                                color: #E30613;
+                                color: #e30613;
                             }
                         }
 
@@ -114,7 +112,7 @@
                             object-fit: contain;
 
                             &[id="mail"] {
-                                top: .5rem;
+                                top: 0.5rem;
                             }
                         }
                     }
@@ -147,13 +145,13 @@
                 position: relative;
 
                 &::after {
-                    content: '';
+                    content: "";
                     position: absolute;
                     top: 0;
                     left: -26rem;
                     width: 58rem;
                     height: 100%;
-                    background-color: #F8F8F8;
+                    background-color: #f8f8f8;
                     z-index: -1;
                 }
             }
@@ -172,18 +170,16 @@
             &-list {
                 &__item {
                     &.active {
-
                         button {
-                            color: #E30613;
+                            color: #e30613;
                         }
-
                     }
 
                     button {
                         font-weight: 700;
                         font-size: 1.7rem;
                         line-height: 4rem;
-                        transition: color .2s ease-in-out;
+                        transition: color 0.2s ease-in-out;
                     }
                 }
             }
@@ -223,7 +219,7 @@
                         flex: 0 0 33rem;
 
                         .contacts-hero__dzerzhinsk-list__item-img {
-                            top: .3rem;
+                            top: 0.3rem;
                             width: 2.1rem;
                             height: 2.1rem;
                             object-fit: contain;
@@ -238,7 +234,7 @@
                         flex: 0 0 100%;
 
                         .contacts-hero__dzerzhinsk-list__item-img {
-                            top: .3rem;
+                            top: 0.3rem;
                             width: 2.4rem;
                             height: 2.4rem;
                             object-fit: contain;
@@ -249,7 +245,7 @@
                         flex: 0 0 100%;
 
                         .contacts-hero__dzerzhinsk-list__item-img {
-                            top: .4rem;
+                            top: 0.4rem;
                             width: 2rem;
                             height: 2rem;
                             object-fit: contain;
@@ -297,18 +293,18 @@
             position: relative;
 
             &::after {
-                content: '';
+                content: "";
                 position: absolute;
                 top: 0;
                 left: -26rem;
                 width: 58rem;
                 height: 100%;
-                background-color: #E8EDF5;
+                background-color: #e8edf5;
                 z-index: -1;
             }
 
             &-heading {
-                margin-bottom: .9rem;
+                margin-bottom: 0.9rem;
                 font-weight: 700;
                 font-size: 2.4rem;
                 line-height: 3.8rem;
@@ -321,25 +317,25 @@
             }
 
             &-email {
-                margin-right: .5rem;
-                margin-bottom: .7rem;
+                margin-right: 0.5rem;
+                margin-bottom: 0.7rem;
                 display: inline-block;
                 font-weight: 700;
                 font-size: 1.7rem;
                 line-height: 2.5rem;
-                color: #E30613;
+                color: #e30613;
             }
 
             &-link-email {
-                margin-bottom: .7rem;
+                margin-bottom: 0.7rem;
                 display: inline-block;
                 font-size: 1.7rem;
                 line-height: 2.5rem;
                 text-decoration: underline;
-                transition: color .2s ease-in-out;
+                transition: color 0.2s ease-in-out;
 
                 &:hover {
-                    color: #E30613;
+                    color: #e30613;
                     text-decoration: underline;
                 }
             }
@@ -349,10 +345,10 @@
                 font-weight: 700;
                 font-size: 2.2rem;
                 line-height: 3.2rem;
-                transition: color .2s ease-in-out;
+                transition: color 0.2s ease-in-out;
 
                 &:hover {
-                    color: #E30613;
+                    color: #e30613;
                 }
             }
         }
@@ -360,7 +356,7 @@
         &__right {
             padding: 7.8rem 0 6.7rem 4.3rem;
             width: 108rem;
-            background-color: #F8F8F8;
+            background-color: #f8f8f8;
 
             &-list {
                 display: flex;
@@ -407,19 +403,38 @@
 
                     &-btn {
                         margin-top: auto;
-                        padding: 1.3rem 5.9rem;
-                        font-size: 1.7rem;
-                        line-height: 2.5rem;
-                        color: #313131;
-                        background-color: transparent;
-                        border: 2px solid #E30613;
-                        transition-property: color, background-color;
-                        transition-duration: .2s;
-                        transition-timing-function: ease-in-out;
+                        display: flex;
+                        align-items: center;
+                        font-weight: 700;
+                        font-size: 1.4rem;
+                        line-height: 1.6rem;
+                        letter-spacing: 0.05em;
+                        text-transform: uppercase;
+                        color: #000000;
+                        transition: color 0.2s ease-in-out;
+
+                        span {
+                            margin-right: 1.8rem;
+                        }
+
+                        svg {
+                            width: 2rem;
+                            height: 1.6rem;
+                            object-fit: contain;
+
+                            path {
+                                transition: fill 0.2s ease-in-out;
+                            }
+                        }
 
                         &:hover {
-                            background-color: #E30613;
-                            color: #FFF;
+                            color: #e30613;
+
+                            svg {
+                                path {
+                                    fill: #e30613;
+                                }
+                            }
                         }
                     }
                 }
@@ -462,7 +477,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    background-color: #E8EDF5;
+                    background-color: #e8edf5;
                     cursor: pointer;
 
                     &-title {
@@ -479,7 +494,7 @@
 
                             line {
                                 transition-property: opacity, transform;
-                                transition-duration: .2s;
+                                transition-duration: 0.2s;
                                 transition-timing-function: ease-in-out;
                                 transform-origin: center;
                             }
@@ -511,11 +526,11 @@
                             &__card {
                                 padding: 3rem 2rem 2rem 2rem;
                                 width: 100%;
-                                background-color: #F8F8F8;
+                                background-color: #f8f8f8;
                             }
 
                             &__name {
-                                margin-bottom: .5rem;
+                                margin-bottom: 0.5rem;
                                 font-weight: 700;
                                 font-size: 1.8rem;
                                 line-height: 2.4rem;
@@ -530,7 +545,7 @@
 
                             &__link {
                                 p {
-                                    margin-right: .5rem;
+                                    margin-right: 0.5rem;
                                     display: inline-block;
                                     font-weight: 700;
                                     font-size: 1.7rem;
@@ -541,10 +556,10 @@
                                     display: inline-block;
                                     font-size: 1.7rem;
                                     line-height: 3rem;
-                                    transition: color .2s ease-in-out;
+                                    transition: color 0.2s ease-in-out;
 
                                     &:hover {
-                                        color: #E30613;
+                                        color: #e30613;
                                     }
                                 }
                             }
@@ -631,11 +646,10 @@
                             &:nth-child(4) {
                                 margin-bottom: 6rem;
                                 order: 1;
-
                             }
 
                             img {
-                                top: .2rem;
+                                top: 0.2rem;
                                 max-width: 4.8rem;
                                 max-height: 4.8rem;
                             }
@@ -763,9 +777,13 @@
                         }
 
                         &-btn {
-                            padding: 2.5rem 12rem;
-                            font-size: 3.4rem;
-                            line-height: 3.9rem;
+                            font-size: 2.8rem;
+                            line-height: 3.2rem;
+
+                            svg {
+                                width: 4rem;
+                                height: 3.2rem;
+                            }
                         }
                     }
                 }
@@ -924,7 +942,7 @@
                             flex: none;
 
                             .contacts-hero__dzerzhinsk-list__item-img {
-                                top: .7rem;
+                                top: 0.7rem;
                                 width: 3.6rem;
                                 height: 3.6rem;
                             }
@@ -934,7 +952,7 @@
                             flex: none;
 
                             .contacts-hero__dzerzhinsk-list__item-img {
-                                top: .7rem;
+                                top: 0.7rem;
                                 width: 3.6rem;
                                 height: 3.6rem;
                             }
@@ -956,10 +974,7 @@
                             font-size: 3.2rem;
                             line-height: 4.8rem;
                         }
-
                     }
-
-
                 }
             }
         }
