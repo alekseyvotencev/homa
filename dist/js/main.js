@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 {
                     iconLayout: 'default#image',
                     // Своё изображение иконки метки.
-                    iconImageHref: 'src/images/svg/homaPoint.svg',
+                    iconImageHref: 'images/svg/homaPoint.svg',
                     // Размеры метки.
                     iconImageSize: [rem(13.2), rem(8.5)],
                     // Смещение левого верхнего угла иконки относительно
