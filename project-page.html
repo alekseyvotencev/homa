@@ -87,16 +87,24 @@
                         как развивается их поставщик. В этом году побывать на заводе и в лабораториях выразили желание
                         более 100 человек!</p>
                     <div class="project-page-main__right-block">
-                        <img src="./images/project-page-img2.png" alt="" class="project-page-main__right-block__img">
-                        <img src="./images/project-page-img3.png" alt="" class="project-page-main__right-block__img">
-                        <img src="./images/project-page-img4.png" alt="" class="project-page-main__right-block__img">
-                        <img src="./images/project-page-img5.png" alt="" class="project-page-main__right-block__img">
+                        <img src="./images/project-page-img2.png" alt="" class="project-page-main__right-block__img"
+                            data-number="0">
+                        <img src="./images/project-page-img3.png" alt="" class="project-page-main__right-block__img"
+                            data-number="1">
+                        <img src="./images/project-page-img4.png" alt="" class="project-page-main__right-block__img"
+                            data-number="2">
+                        <img src="./images/project-page-img5.png" alt="" class="project-page-main__right-block__img"
+                            data-number="3">
                     </div>
                     <div class="project-page-main__right-block2">
-                        <img src="./images/project-page-img6.png" alt="" class="project-page-main__right-block__img">
-                        <img src="./images/project-page-img7.png" alt="" class="project-page-main__right-block__img">
-                        <img src="./images/project-page-img8.png" alt="" class="project-page-main__right-block__img">
-                        <img src="./images/project-page-img9.png" alt="" class="project-page-main__right-block__img">
+                        <img src="./images/project-page-img6.png" alt="" class="project-page-main__right-block__img"
+                            data-number="4">
+                        <img src="./images/project-page-img7.png" alt="" class="project-page-main__right-block__img"
+                            data-number="5">
+                        <img src="./images/project-page-img8.png" alt="" class="project-page-main__right-block__img"
+                            data-number="6">
+                        <img src="./images/project-page-img9.png" alt="" class="project-page-main__right-block__img"
+                            data-number="7">
                     </div>
                     <p class="project-page-main__right-heading3">Комментарии к проету</p>
                     <ul class="project-page-main__right-list">
@@ -186,6 +194,57 @@
                 </div>
             </div>
         </section>
+
+        <div class="popup popup__photo">
+            <div class="popup__content">
+                <div class="container">
+                    <button class="popup__close">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23 3L3 23" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M23 23L3 3" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <div class="swiper-container popup__photo-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide popup__photo-swiper__slide">
+                                <img src="./images/project-page-img2.png" alt="" class="popup__photo-swiper__slide-img">
+                            </div>
+                            <div class="swiper-slide popup__photo-swiper__slide">
+                                <img src="./images/project-page-img3.png" alt="" class="popup__photo-swiper__slide-img">
+                            </div>
+                            <div class="swiper-slide popup__photo-swiper__slide">
+                                <img src="./images/project-page-img4.png" alt="" class="popup__photo-swiper__slide-img">
+                            </div>
+                            <div class="swiper-slide popup__photo-swiper__slide">
+                                <img src="./images/project-page-img5.png" alt="" class="popup__photo-swiper__slide-img">
+                            </div>
+                            <div class="swiper-slide popup__photo-swiper__slide">
+                                <img src="./images/project-page-img6.png" alt="" class="popup__photo-swiper__slide-img">
+                            </div>
+                            <div class="swiper-slide popup__photo-swiper__slide">
+                                <img src="./images/project-page-img7.png" alt="" class="popup__photo-swiper__slide-img">
+                            </div>
+                            <div class="swiper-slide popup__photo-swiper__slide">
+                                <img src="./images/project-page-img8.png" alt="" class="popup__photo-swiper__slide-img">
+                            </div>
+                            <div class="swiper-slide popup__photo-swiper__slide">
+                                <img src="./images/project-page-img9.png" alt="" class="popup__photo-swiper__slide-img">
+                            </div>
+                        </div>
+                        <div class="popup__photo-swiper__controllers swiper__controls">
+                            <div class="swiper__controls__prev">
+                                <img src="./images/svg/black-arrow.svg" alt="">
+                            </div>
+                            <div class="swiper__controls__pagination"></div>
+                            <div class="swiper__controls__next">
+                                <img src="./images/svg/black-arrow.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
 
         @@include('./templates/partners.html')
     </main>

@@ -108,11 +108,13 @@ const swiperRecommendations = new Swiper('.swiper__recommendations', {
     breakpoints: {
         320: {
             slidesPerView: 2,
-            spaceBetween: rem(3)
+            spaceBetween: rem(3),
+            slidesPerGroup: 2,
         },
         769: {
             slidesPerView: 'auto',
-            spaceBetween: 0
+            spaceBetween: 0,
+            slidesPerGroup: 4
         }
     }
 });
@@ -140,12 +142,14 @@ const swiperReviews = new Swiper('.swiper__reviews', {
         320: {
             slidesPerView: 1,
             slidesPerColumn: 2,
-            spaceBetween: rem(4)
+            spaceBetween: rem(4),
+            slidesPerGroup: 1,
         },
         769: {
             slidesPerView: 2,
             slidesPerColumn: 1,
-            spaceBetween: rem(3.3)
+            spaceBetween: rem(3.3),
+            slidesPerGroup: 2,
         }
     }
 });
@@ -173,12 +177,14 @@ const swiperVideo = new Swiper('.swiper__video', {
         320: {
             slidesPerView: 1,
             slidesPerColumn: 2,
-            spaceBetween: rem(4)
+            spaceBetween: rem(4),
+            slidesPerGroup: 1,
         },
         769: {
             slidesPerView: 4,
             slidesPerColumn: 1,
-            spaceBetween: rem(3.3)
+            spaceBetween: rem(3.3),
+            slidesPerGroup: 4,
         }
     }
 });
@@ -242,9 +248,11 @@ const swiperSame = new Swiper('.swiper__same', {
     breakpoints: {
         320: {
             slidesPerView: 1,
+            slidesPerGroup: 1,
         },
         769: {
             slidesPerView: 'auto',
+            slidesPerGroup: 3,
         }
     }
 });
@@ -273,9 +281,11 @@ const swiperRelated = new Swiper('.swiper__related', {
     breakpoints: {
         320: {
             slidesPerView: 1,
+            slidesPerGroup: 1,
         },
         769: {
             slidesPerView: 'auto',
+            slidesPerGroup: 3,
         }
     }
 });
@@ -303,10 +313,12 @@ const swiperProductRecommendations = new Swiper('.swiper__product-recommendation
         320: {
             slidesPerView: 2,
             spaceBetween: rem(3),
+            slidesPerGroup: 2,
         },
         769: {
             slidesPerView: 'auto',
             spaceBetween: rem(3.2),
+            slidesPerGroup: 3,
         }
     }
 });
@@ -369,9 +381,11 @@ const swiperExperts = new Swiper('.press-main__experts', {
     breakpoints: {
         320: {
             slidesPerView: 1,
+            slidesPerGroup: 1,
         },
         769: {
             slidesPerView: 'auto',
+            slidesPerGroup: 3,
         }
     }
 });
@@ -399,9 +413,11 @@ const swiperMedia = new Swiper('.press-main__media', {
     breakpoints: {
         320: {
             slidesPerView: 1,
+            slidesPerGroup: 1,
         },
         769: {
             slidesPerView: 'auto',
+            slidesPerGroup: 3,
         }
     }
 });
@@ -429,10 +445,12 @@ const swiperPhoto = new Swiper('.press-main__photo', {
         320: {
             slidesPerView: 2,
             spaceBetween: rem(3),
+            slidesPerGroup: 2,
         },
         769: {
             slidesPerView: 'auto',
             spaceBetween: rem(4),
+            slidesPerGroup: 3,
         }
     }
 });
@@ -494,9 +512,11 @@ const swiperEvents = new Swiper('.projects-main__events', {
     breakpoints: {
         320: {
             slidesPerView: 1,
+            slidesPerGroup: 1,
         },
         769: {
             slidesPerView: 'auto',
+            slidesPerGroup: 3,
         }
     }
 });
@@ -524,9 +544,11 @@ const swiperGlue = new Swiper('.projects-main__glue', {
     breakpoints: {
         320: {
             slidesPerView: 1,
+            slidesPerGroup: 1,
         },
         769: {
             slidesPerView: 'auto',
+            slidesPerGroup: 3,
         }
     }
 });
@@ -554,9 +576,11 @@ const swiperObjects = new Swiper('.projects-main__objects', {
     breakpoints: {
         320: {
             slidesPerView: 1,
+            slidesPerGroup: 1,
         },
         769: {
             slidesPerView: 'auto',
+            slidesPerGroup: 3,
         }
     }
 });
@@ -584,12 +608,37 @@ const swiperHomakoll = new Swiper('.projects-main__homakoll', {
     breakpoints: {
         320: {
             slidesPerView: 1,
+            slidesPerGroup: 1,
         },
         769: {
             slidesPerView: 'auto',
+            slidesPerGroup: 3,
         }
     }
 });
+
+const swiperModal = new Swiper('.popup__photo-swiper', {
+    direction: 'horizontal',
+    speed: 500,
+    allowTouchMove: false,
+    loop: false,
+    spaceBetween: rem(4.1),
+    slidesPerView: 1,
+
+    navigation: {
+        nextEl: '.popup__photo-swiper__controllers .swiper__controls__next',
+        prevEl: '.popup__photo-swiper__controllers .swiper__controls__prev',
+    },
+
+    pagination: {
+        el: '.popup__photo-swiper__controllers .swiper__controls__pagination',
+        type: 'custom',
+        renderCustom: function (swiper, current, total) {
+            return `<span class="current">${getTwoDigitNumber(current)}</span><span class="total">${getTwoDigitNumber(total)}</span>`;
+        }
+    }
+});
+
 
 
 

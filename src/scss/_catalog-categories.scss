@@ -39,12 +39,11 @@
                     color: #313131;
                 }
 
-
                 button {
                     svg {
-                        width: .8rem;
+                        width: 0.8rem;
                         height: 1.3rem;
-                        transition: transform .2s ease-in-out;
+                        transition: transform 0.2s ease-in-out;
                         transform-origin: left center;
                     }
                 }
@@ -64,12 +63,19 @@
                             margin-bottom: 1.5rem;
                         }
 
-
                         &.acc_active {
                             .catalog__categories-accordion__item-sublist-item-head {
+                                p {
+                                    color: #e30613;
+                                    font-weight: 400;
+                                }
                                 button {
                                     svg {
                                         transform: rotate(90deg);
+                                        path {
+                                            stroke: #e30613;
+                                            stroke-width: 1.2px;
+                                        }
                                     }
                                 }
                             }
@@ -83,13 +89,13 @@
 
                             &:hover {
                                 p {
-                                    color: #E30613;
+                                    color: #e30613;
                                 }
 
                                 button {
                                     svg {
                                         path {
-                                            stroke: #E30613;
+                                            stroke: #e30613;
                                         }
                                     }
                                 }
@@ -101,25 +107,25 @@
                                 font-size: 1.6rem;
                                 line-height: 1.9rem;
                                 color: #313131;
-                                transition: color .2s ease-in-out;
+                                transition: color 0.2s ease-in-out;
                             }
 
                             button {
                                 svg {
-                                    width: .8rem;
+                                    width: 0.8rem;
                                     height: 1.3rem;
-                                    transition: transform .2s ease-in-out;
+                                    transition: transform 0.2s ease-in-out;
                                     transform-origin: left center;
 
                                     path {
-                                        transition: stroke .2s ease-in-out;
+                                        transition: stroke 0.2s ease-in-out;
                                     }
                                 }
                             }
                         }
 
                         &-content {
-                            margin-top: .5rem;
+                            margin-top: 0.5rem;
 
                             &-list {
                                 padding-left: 2rem;
@@ -130,10 +136,10 @@
                                         font-size: 1.6rem;
                                         line-height: 4rem;
                                         color: #000000;
-                                        transition: color .2s ease-in-out;
+                                        transition: color 0.2s ease-in-out;
 
                                         &:hover {
-                                            color: #E30613;
+                                            color: #e30613;
                                         }
                                     }
                                 }
@@ -145,7 +151,7 @@
         }
     }
 
-    @media (max-width:48em) {
+    @media (max-width: 48em) {
         padding-top: 3.4rem;
         padding-bottom: 6.8rem;
         padding-right: 0;
@@ -211,8 +217,6 @@
                             }
                         }
                     }
-
-
                 }
             }
         }

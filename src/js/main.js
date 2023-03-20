@@ -430,4 +430,32 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     }
+
+    // модалка с фотками
+
+
+    if (document.querySelector('.project-page-main__right-block__img')) {
+
+        const photoModal = document.querySelector('.popup__photo');
+        const photoModalClose = photoModal.querySelector('.popup__close');
+
+        photoModalClose.addEventListener('click', function () {
+            photoModal.classList.remove('active');
+            document.body.classList.remove('lock');
+        })
+
+        const swiperPhoto = photoModal.querySelector('.popup__photo-swiper');
+
+        const projectPhotos = document.querySelectorAll('.project-page-main__right-block__img');
+        projectPhotos.forEach(photo => {
+            photo.addEventListener('click', function (e) {
+                const number = e.target.dataset.number;
+                console.log(swiperPhoto.swiper);
+                swiperPhoto.swiper.slideTo(number);
+                photoModal.classList.add('active');
+                document.body.classList.add('lock');
+
+            })
+        })
+    }
 })
