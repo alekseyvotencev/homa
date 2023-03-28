@@ -104,8 +104,8 @@
             column-gap: 0.5rem;
             row-gap: 0.5rem;
             grid-template-areas:
-                "A A A   B   B "
-                "A A A   C   D";
+                "A A   B   B "
+                "A A   C   D";
 
             &__img {
                 width: 100%;
@@ -133,13 +133,17 @@
 
         &-block {
             margin-bottom: 1rem;
+            grid-template-columns: auto auto 23rem 23rem;
+            grid-template-rows: 22rem 23rem;
         }
 
         &-block2 {
             margin-bottom: 9.4rem;
+            grid-template-columns: 23rem 23rem auto auto;
+            grid-template-rows: 22rem 23rem;
             grid-template-areas:
-                "A   A   D D D"
-                "B   C   D D D";
+                "A   A   D D"
+                "B   C   D D";
         }
 
         &-list {
