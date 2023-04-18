@@ -65,7 +65,14 @@
 }
 
 .popup__photo {
+    .popup__close {
+        top: -5rem;
+        right: 20rem;
+    }
+
     &-swiper {
+        width: 75rem;
+
         .swiper-wrapper {
             margin-bottom: 3rem;
         }
@@ -76,23 +83,20 @@
             justify-content: center;
 
             &-img {
-                max-height: 70rem;
-                object-fit: contain;
-                align-self: center;
+                width: 100%;
+                height: 56rem;
+                object-fit: cover;
             }
         }
     }
 
     @media (max-width: 48em) {
+        .popup__close {
+            top: -10rem;
+            right: 4rem;
+        }
         &-swiper {
-            &__slide {
-                &-img {
-                 width: auto;
-                 max-width: 100%;
-                 height: 70rem;
-                 max-height: none;
-                }
-            }
+            width: 100%;
         }
     }
 }
