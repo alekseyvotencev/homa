@@ -113,12 +113,7 @@
                 position: relative;
                 object-fit: cover;
                 cursor: pointer;
-                transition: transform .2s ease-in-out;
-
-                &:hover {
-                    transform: scale(1.2);
-                    z-index: 2;
-                }
+                transition: transform 0.2s ease-in-out;
 
                 &:first-child {
                     grid-area: A;
