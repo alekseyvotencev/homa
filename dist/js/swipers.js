@@ -141,7 +141,7 @@ const swiperReviews = new Swiper('.swiper__reviews', {
     breakpoints: {
         320: {
             slidesPerView: 1,
-            slidesPerColumn: 2,
+            slidesPerColumn: 1,
             spaceBetween: rem(4),
             slidesPerGroup: 1,
         },

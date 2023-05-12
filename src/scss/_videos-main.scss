@@ -16,7 +16,7 @@
                 margin-right: 3.2rem;
             }
 
-            &:not(:nth-last-child(-n+4)) {
+            &:not(:nth-last-child(-n + 4)) {
                 margin-bottom: 10rem;
             }
 
@@ -122,15 +122,15 @@
             left: auto;
 
             .current {
-                margin-right: .5rem;
-                font-family: 'Circe';
+                margin-right: 0.5rem;
+                font-family: "Circe";
                 font-size: 4rem;
                 line-height: 5.9rem;
                 color: #000000;
             }
 
             .total {
-                font-family: 'Circe';
+                font-family: "Circe";
                 font-size: 1.5rem;
                 line-height: 1.8rem;
                 color: #000000;
@@ -152,7 +152,7 @@
                     margin-right: 0;
                 }
 
-                &:not(:nth-last-child(-n+4)) {
+                &:not(:nth-last-child(-n + 4)) {
                     margin-bottom: 0;
                 }
 
@@ -162,10 +162,10 @@
 
                 &__img {
                     height: 36.4rem;
+                    object-fit: cover;
                 }
 
-                &__link {
-
+                &__play {
                     img {
                         width: 10.6rem;
                         height: 10.6rem;
@@ -212,7 +212,7 @@
                 }
 
                 .total {
-                    font-family: 'Circe';
+                    font-family: "Circe";
                     font-size: 3rem;
                     line-height: 4.8rem;
                     color: #000000;

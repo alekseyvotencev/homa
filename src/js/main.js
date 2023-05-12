@@ -165,6 +165,32 @@ document.addEventListener('DOMContentLoaded', function () {
         bubble2.pause();
     });
 
+    // раскрывающийся список в футере в мобилке
+
+    if (window.innerWidth <= 768) {
+        const list1Btn = document.querySelector('.footer__list1-heading');
+        const list2Btn = document.querySelector('.footer__list2-heading');
+        list1Btn.addEventListener('click', function () {
+            list1Btn.classList.toggle('active');
+            let content = list1Btn.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null
+            } else {
+                content.style.maxHeight = content.scrollHeight / 5 + "rem";
+            }
+        })
+
+        list2Btn.addEventListener('click', function () {
+            list2Btn.classList.toggle('active');
+            let content = list2Btn.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null
+            } else {
+                content.style.maxHeight = content.scrollHeight / 5 + "rem";
+            }
+        })
+    }
+
     // селект на странице ...
     if (document.querySelector('.sorting-select')) {
         const sortingSelect = new Choices('.sorting-select', {

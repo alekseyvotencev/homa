@@ -1,7 +1,7 @@
 .footer {
     padding-top: 11rem;
     padding-bottom: 6.8rem;
-    background-color: #EFF2F6;
+    background-color: #eff2f6;
 
     &__top {
         margin-bottom: 2rem;
@@ -26,68 +26,69 @@
         &-copyright {
             margin-bottom: 4rem;
             width: 20rem;
-            font-family: 'Circe';
+            font-family: "Circe";
             font-weight: 400;
             font-size: 1.8rem;
             line-height: 2.7rem;
-            color: #9C9C9C;
+            color: #9c9c9c;
 
             .copy {
                 display: inline-block;
-                transform: translateY(-.2rem);
+                transform: translateY(-0.2rem);
             }
         }
 
         &-policy {
             width: 20rem;
             display: inline-block;
-            font-family: 'Circe';
+            font-family: "Circe";
             font-weight: 400;
             font-size: 1.8rem;
             line-height: 2.7rem;
             text-decoration-line: underline;
-            color: #9C9C9C;
-            transition: color .2s ease-in-out;
+            color: #9c9c9c;
+            transition: color 0.2s ease-in-out;
 
             &:hover {
-                color: #E30613;
+                color: #e30613;
                 text-decoration: underline;
             }
         }
     }
 
     &__nav {
-        margin-top: .5rem;
+        margin-top: 0.5rem;
         margin-right: 14.5rem;
 
         &-item {
-
             &:not(:last-child) {
                 margin-bottom: 2.65rem;
             }
 
             a {
-                font-family: 'Circe';
+                font-family: "Circe";
                 font-weight: 700;
                 font-size: 1.8rem;
                 line-height: 2.7rem;
                 color: #000;
-                transition: color .2s ease-in-out;
+                transition: color 0.2s ease-in-out;
 
                 &:hover {
-                    color: #E30613;
+                    color: #e30613;
                 }
             }
         }
     }
 
-    &__list1 {
-        margin-top: .5rem;
+    &__list1-container {
+        margin-top: 0.5rem;
         margin-right: 5.4rem;
+    }
 
+    &__list1 {
         &-heading {
             margin-bottom: 2.6rem;
-            font-family: 'Circe';
+            font-family: "Circe";
             font-weight: 700;
             font-size: 1.8rem;
             line-height: 2.7rem;
@@ -95,28 +96,27 @@
         }
 
         &-item {
-
             a {
-                font-family: 'Circe';
+                font-family: "Circe";
                 font-weight: 350;
                 font-size: 1.8rem;
                 line-height: 2.7rem;
                 color: #000000;
-                transition: color .2s ease-in-out;
+                transition: color 0.2s ease-in-out;
 
                 &:hover {
-                    color: #E30613;
+                    color: #e30613;
                 }
             }
         }
     }
 
     &__list2 {
-        margin-top: .5rem;
+        margin-top: 0.5rem;
 
         &-heading {
             margin-bottom: 2.6rem;
-            font-family: 'Circe';
+            font-family: "Circe";
             font-weight: 700;
             font-size: 1.8rem;
             line-height: 2.7rem;
@@ -124,17 +124,16 @@
         }
 
         &-item {
-
             a {
-                font-family: 'Circe';
+                font-family: "Circe";
                 font-weight: 350;
                 font-size: 1.8rem;
                 line-height: 2.7rem;
                 color: #000000;
-                transition: color .2s ease-in-out;
+                transition: color 0.2s ease-in-out;
 
                 &:hover {
-                    color: #E30613;
+                    color: #e30613;
                 }
             }
         }
@@ -157,7 +156,7 @@
             }
 
             &__developed {
-                font-family: 'Circe';
+                font-family: "Circe";
                 font-size: 1.6rem;
                 line-height: 2.4rem;
                 color: #000000;
@@ -166,14 +165,13 @@
                     text-transform: uppercase;
                     text-decoration: underline;
                 }
-
             }
         }
 
         &-list {
             &__heading {
                 margin-bottom: 2.8rem;
-                font-family: 'Circe';
+                font-family: "Circe";
                 font-weight: 700;
                 font-size: 1.8rem;
                 line-height: 2.4rem;
@@ -188,16 +186,16 @@
                 &-link {
                     display: flex;
                     align-items: center;
-                    font-family: 'Circe';
+                    font-family: "Circe";
                     font-style: normal;
                     font-weight: 350;
                     font-size: 1.8rem;
                     line-height: 2.7rem;
                     color: #000000;
-                    transition: color .2s ease-in-out;
+                    transition: color 0.2s ease-in-out;
 
                     &:hover {
-                        color: #E30613;
+                        color: #e30613;
                     }
 
                     img {
@@ -211,7 +209,7 @@
         }
     }
 
-    @media (max-width:48em) {
+    @media (max-width: 48em) {
         padding-top: 6rem;
         padding-bottom: 8rem;
 
@@ -253,7 +251,7 @@
                     margin-bottom: 0;
                 }
 
-                &:not(:nth-last-child(-n+2)) {
+                &:not(:nth-last-child(-n + 2)) {
                     margin-bottom: 3rem;
                 }
 
@@ -264,16 +262,42 @@
             }
         }
 
-        &__list1,
-        &__list2 {
+        &__list1-container,
+        &__list2-container {
             margin: 0;
             margin-bottom: 3rem;
             flex: 0 0 50%;
+        }
+
+        &__list1,
+        &__list2 {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
 
             &-heading {
                 margin-bottom: 2rem;
                 font-size: 3.2rem;
                 line-height: 4.8rem;
+                display: flex;
+                align-items: center;
+
+                span {
+                    margin-right: 2rem;
+                }
+
+                svg {
+                    width: 2.6rem;
+                    height: 1.6rem;
+                    object-fit: contain;
+                    transition: transform 0.3s ease-in-out;
+                }
+
+                &.active {
+                    svg {
+                        transform: rotate(180deg);
+                    }
+                }
             }
 
             &-item {
@@ -316,27 +340,27 @@
 
                 &__copyright {
                     width: 33rem;
-                    font-family: 'Circe';
+                    font-family: "Circe";
                     font-style: normal;
                     font-weight: 400;
                     font-size: 3.2rem;
                     line-height: 4.8rem;
-                    color: #9C9C9C;
+                    color: #9c9c9c;
 
                     .copy {
                         display: inline-block;
-                        transform: translateY(-.3rem);
+                        transform: translateY(-0.3rem);
                     }
                 }
 
                 &__policy {
                     width: 33rem;
-                    font-family: 'Circe';
+                    font-family: "Circe";
                     font-style: normal;
                     font-weight: 400;
                     font-size: 3.2rem;
                     line-height: 4.8rem;
-                    color: #9C9C9C;
+                    color: #9c9c9c;
                     text-decoration: underline;
                 }
             }
@@ -372,7 +396,5 @@
                 }
             }
         }
-
-
     }
 }
