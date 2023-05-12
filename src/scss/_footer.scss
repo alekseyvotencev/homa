@@ -226,6 +226,7 @@
             flex-direction: column;
             align-items: center;
             align-self: center;
+            order: 0;
 
             &-logo {
                 margin-bottom: 0;
@@ -242,16 +243,14 @@
             margin-bottom: 3rem;
             width: 100%;
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            order: 3;
 
             &-item {
                 flex: 0 0 50%;
 
                 &:not(:last-child) {
-                    margin-bottom: 0;
-                }
-
-                &:not(:nth-last-child(-n + 2)) {
                     margin-bottom: 3rem;
                 }
 
@@ -262,21 +261,39 @@
             }
         }
 
+        &__list1-container {
+            order: 1;
+        }
+
+        &__list2-container {
+            order: 2;
+        }
+
         &__list1-container,
         &__list2-container {
             margin: 0;
             margin-bottom: 3rem;
-            flex: 0 0 50%;
+            width: 100%;
         }
 
         &__list1,
         &__list2 {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-in-out;
+            opacity: 0;
+            visibility: hidden;
+            transition-property: max-height, padding, opacity, visibility;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in-out;
+
+            &.active {
+                padding-top: 2rem;
+                opacity: 1;
+                visibility: visible;
+            }
 
             &-heading {
-                margin-bottom: 2rem;
+                margin-bottom: 0;
                 font-size: 3.2rem;
                 line-height: 4.8rem;
                 display: flex;

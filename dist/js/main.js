@@ -174,8 +174,10 @@ document.addEventListener('DOMContentLoaded', function () {
             list1Btn.classList.toggle('active');
             let content = list1Btn.nextElementSibling;
             if (content.style.maxHeight) {
+                content.classList.remove('active');
                 content.style.maxHeight = null
             } else {
+                content.classList.add('active');
                 content.style.maxHeight = content.scrollHeight / 5 + "rem";
             }
         })
