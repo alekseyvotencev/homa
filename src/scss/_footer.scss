@@ -245,7 +245,7 @@
             display: flex;
             flex-wrap: nowrap;
             flex-direction: column;
-            order: 3;
+            order: 4;
 
             &-item {
                 flex: 0 0 50%;
@@ -268,16 +268,21 @@
         &__list2-container {
             order: 2;
         }
+        &__list3-container {
+            order: 3;
+        }
 
         &__list1-container,
-        &__list2-container {
+        &__list2-container,
+        &__list3-container {
             margin: 0;
             margin-bottom: 3rem;
             width: 100%;
         }
 
         &__list1,
-        &__list2 {
+        &__list2,
+        &__list3 {
             max-height: 0;
             overflow: hidden;
             opacity: 0;
@@ -294,6 +299,7 @@
 
             &-heading {
                 margin-bottom: 0;
+                font-weight: 700;
                 font-size: 3.2rem;
                 line-height: 4.8rem;
                 display: flex;
@@ -323,6 +329,7 @@
                 }
 
                 a {
+                    font-weight: 300;
                     font-size: 3.2rem;
                     line-height: 4.8rem;
                 }

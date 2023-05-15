@@ -170,6 +170,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if (window.innerWidth <= 768) {
         const list1Btn = document.querySelector('.footer__list1-heading');
         const list2Btn = document.querySelector('.footer__list2-heading');
+        const list3Btn = document.querySelector('.footer__list3-heading');
+
         list1Btn.addEventListener('click', function () {
             list1Btn.classList.toggle('active');
             let content = list1Btn.nextElementSibling;
@@ -186,8 +188,22 @@ document.addEventListener('DOMContentLoaded', function () {
             list2Btn.classList.toggle('active');
             let content = list2Btn.nextElementSibling;
             if (content.style.maxHeight) {
+                content.classList.remove('active');
                 content.style.maxHeight = null
             } else {
+                content.classList.add('active');
+                content.style.maxHeight = content.scrollHeight / 5 + "rem";
+            }
+        })
+
+        list3Btn.addEventListener('click', function () {
+            list3Btn.classList.toggle('active');
+            let content = list3Btn.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.classList.remove('active');
+                content.style.maxHeight = null
+            } else {
+                content.classList.add('active');
                 content.style.maxHeight = content.scrollHeight / 5 + "rem";
             }
         })
