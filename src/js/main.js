@@ -174,6 +174,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         list1Btn.addEventListener('click', function () {
             list1Btn.classList.toggle('active');
+            list2Btn.nextElementSibling.style.maxHeight = null;
+            list3Btn.nextElementSibling.style.maxHeight = null;
             let content = list1Btn.nextElementSibling;
             if (content.style.maxHeight) {
                 content.classList.remove('active');
@@ -186,6 +188,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         list2Btn.addEventListener('click', function () {
             list2Btn.classList.toggle('active');
+            list1Btn.nextElementSibling.style.maxHeight = null;
+            list3Btn.nextElementSibling.style.maxHeight = null;
             let content = list2Btn.nextElementSibling;
             if (content.style.maxHeight) {
                 content.classList.remove('active');
@@ -198,6 +202,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         list3Btn.addEventListener('click', function () {
             list3Btn.classList.toggle('active');
+            list1Btn.nextElementSibling.style.maxHeight = null;
+            list2Btn.nextElementSibling.style.maxHeight = null;
             let content = list3Btn.nextElementSibling;
             if (content.style.maxHeight) {
                 content.classList.remove('active');
